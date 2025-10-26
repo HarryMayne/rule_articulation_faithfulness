@@ -1,7 +1,7 @@
 ############################################################################################################
 # validate_data.py
 # Simple checker that runs each rule_* function over its matching rule_{n}.jsonl dataset.
-# Reports class balance and correctness stats per rule.
+# Reports length, class balance and correctness stats per rule.
 ############################################################################################################
 
 import argparse
@@ -21,7 +21,8 @@ RULE_FUNC_PATTERN = re.compile(
     re.S | re.M,
 )
 
-
+############################################################################################################
+# args parse
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Validate balance and correctness for rule_{n}.jsonl files."
@@ -40,13 +41,14 @@ def parse_args() -> argparse.Namespace:
     )
     return parser.parse_args()
 
-
+############################################################################################################
+# helpers
+############################################################################################################
 def load_rule_source(rules_text: str, rule_number: int) -> str:
     for match in RULE_FUNC_PATTERN.finditer(rules_text):
         if int(match.group(2)) == rule_number:
             return match.group(0).strip()
     raise ValueError(f"rule_{rule_number} not found in rules.py")
-
 
 def build_rule_callable(rule_source: str, rule_number: int):
     namespace: Dict[str, object] = {}
@@ -55,7 +57,6 @@ def build_rule_callable(rule_source: str, rule_number: int):
     if fn is None:
         raise RuntimeError(f"rule_{rule_number} could not be constructed.")
     return fn
-
 
 def read_jsonl(path: Path) -> List[Dict[str, object]]:
     records: List[Dict[str, object]] = []
@@ -67,36 +68,60 @@ def read_jsonl(path: Path) -> List[Dict[str, object]]:
             records.append(json.loads(line))
     return records
 
-
-def evaluate_rule(records: List[Dict[str, object]], rule_fn) -> Tuple[bool, bool, int, int, int]:
+def evaluate_rule(
+    records: List[Dict[str, object]],
+    rule_fn,
+) -> Tuple[float, float, int, int, int, int]:
     total = len(records)
     positives = sum(1 for rec in records if rec.get("label") is True)
     negatives = total - positives
-    balanced = positives == negatives
 
     correct = 0
+    texts = []
     for rec in records:
         text = rec.get("text", "")
         label = bool(rec.get("label"))
         predicted = bool(rule_fn(text))
         if predicted == label:
             correct += 1
-    return balanced, correct == total, positives, negatives, total - correct
+        texts.append(text)
 
+    balance_pct = (positives / total * 100) if total else 0.0
+    accuracy_pct = (correct / total * 100) if total else 0.0
+    duplicates = len(texts) - len(set(texts))
+    errors = total - correct
+    return balance_pct, accuracy_pct, positives, negatives, errors, duplicates
 
-def pretty_print(results: List[Tuple[int, str, bool, bool, int, int, int]]) -> None:
-    header = f"{'Rule':<6}{'Samples':<10}{'Pos/Neg':<12}{'Balanced':<10}{'Correct':<10}{'Errors':<8}{'File'}"
+def pretty_print(
+    results: List[Tuple[int, str, float, float, int, int, int, int]]
+) -> None:
+    header = (
+        f"{'Rule':<6}"
+        f"{'Samples':<10}"
+        f"{'Pos/Neg':<12}"
+        f"{'Pos%':<8}"
+        f"{'Acc%':<8}"
+        f"{'Errors':<8}"
+        f"{'Dupes':<8}"
+        f"{'File'}"
+    )
     print(header)
     print("-" * len(header))
-    for rule_number, filename, balanced, correct, positives, negatives, errors in results:
-        balance_str = "yes" if balanced else "no"
-        correct_str = "yes" if correct else "no"
+    for rule_number, filename, pos_pct, acc_pct, positives, negatives, errors, dupes in results:
+        samples = positives + negatives
+        pos_neg = f"{positives}/{negatives}"
         print(
-            f"{rule_number:<6}{positives+negatives:<10}{positives}/{negatives:<12}"
-            f"{balance_str:<10}{correct_str:<10}{errors:<8}{filename}"
+            f"{rule_number:<6}"
+            f"{samples:<10}"
+            f"{pos_neg:<12}"
+            f"{pos_pct:>5.1f}% "
+            f"{acc_pct:>5.1f}% "
+            f"{errors:<8}"
+            f"{dupes:<8}"
+            f"{filename}"
         )
 
-
+############################################################################################################
 def main() -> None:
     args = parse_args()
 
@@ -119,8 +144,21 @@ def main() -> None:
         rule_source = load_rule_source(rules_text, rule_number)
         rule_fn = build_rule_callable(rule_source, rule_number)
         records = read_jsonl(path)
-        balanced, correct, positives, negatives, errors = evaluate_rule(records, rule_fn)
-        results.append((rule_number, path.name, balanced, correct, positives, negatives, errors))
+        balance_pct, accuracy_pct, positives, negatives, errors, duplicates = evaluate_rule(
+            records, rule_fn
+        )
+        results.append(
+            (
+                rule_number,
+                path.name,
+                balance_pct,
+                accuracy_pct,
+                positives,
+                negatives,
+                errors,
+                duplicates,
+            )
+        )
 
     pretty_print(results)
 

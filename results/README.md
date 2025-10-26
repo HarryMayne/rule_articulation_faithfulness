@@ -1,0 +1,1 @@
+Directory for each model and json results file for each rule. Also meta.json for the metadata of the run...? or scored results??
