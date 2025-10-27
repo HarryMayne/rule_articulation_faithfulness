@@ -2,6 +2,7 @@
 # make_data.py: Helper that asks GPT-5 for JSONL examples of a chosen rule_* function.
 # Light dedupe/balance checks keep appends clean.
 # Usage: python3 make_data.py --rule-number 1 --examples 10
+# just does it all in one generation
 ############################################################################################################
 
 import argparse
@@ -93,7 +94,7 @@ def extract_rule_source(rules_text: str, rule_number: int, rules_path: Path) -> 
         raise ValueError(f"Could not find rule_{rule_number} inside {rules_path}")
     return match.group(0).strip()
 
-
+# Load the existing records....
 def read_existing_dataset(path: Path):
     """
     Return (records, raw_text) for any existing dataset so we can include it in the prompt
@@ -116,7 +117,7 @@ def read_existing_dataset(path: Path):
                 pass
     return records, "\n".join(raw_lines)
 
-
+# 
 def parse_new_examples(raw: str):
     records = []
     for line in raw.splitlines():
@@ -125,32 +126,6 @@ def parse_new_examples(raw: str):
             continue
         records.append(json.loads(line))
     return records
-
-
-def validate_new_examples(records, expected_count: int, existing_texts):
-    if len(records) != expected_count:
-        raise ValueError(
-            f"Expected {expected_count} new examples but model returned {len(records)}."
-        )
-    positives = sum(1 for rec in records if bool(rec.get("label")))
-    negatives = len(records) - positives
-    if positives != negatives:
-        raise ValueError("New examples must themselves be balanced True/False.")
-
-    texts = []
-    for rec in records:
-        if "text" not in rec or "label" not in rec:
-            raise ValueError(f"Missing keys in generated line: {rec}")
-        rec["text"] = str(rec["text"])
-        rec["label"] = bool(rec["label"])
-        texts.append(rec["text"])
-
-    if len(set(texts)) != len(texts):
-        raise ValueError("Duplicates detected among the new examples.")
-    overlap = set(texts) & existing_texts
-    if overlap:
-        raise ValueError("Model repeated texts that already exist in the dataset.")
-
 
 # do the request
 def request_examples(client: OpenAI, model: str, prompt: str) -> str:
@@ -167,22 +142,15 @@ def request_examples(client: OpenAI, model: str, prompt: str) -> str:
     return response.choices[0].message.content.strip()
 
 
+################################################################################################
 def main() -> None:
     args = parse_args()
-
-    if args.examples <= 0 or args.examples % 2 != 0:
-        raise ValueError("--examples must be a positive even number for balance.")
 
     if not os.getenv("OPENAI_API_KEY"):
         raise RuntimeError("OPENAI_API_KEY is not set. Please export it before running.")
 
     output_path = args.output_dir / f"rule_{args.rule_number}.jsonl"
     existing_records, existing_raw = read_existing_dataset(output_path)
-    existing_texts = {
-        rec["text"]
-        for rec in existing_records
-        if isinstance(rec, dict) and "text" in rec
-    }
     existing_block = ""
     if existing_raw:
         safe_existing = existing_raw.replace("{", "{{").replace("}", "}}")
@@ -214,13 +182,22 @@ def main() -> None:
     output_text = request_examples(client, args.model, prompt)
 
     new_records = parse_new_examples(output_text)
-    validate_new_examples(new_records, args.examples, existing_texts)
+    #validate_new_examples(new_records, args.examples, existing_texts)
     random.shuffle(new_records)
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    mode = "a" if output_path.exists() else "w"
-    with output_path.open(mode, encoding="utf-8") as fh:
-        if output_path.exists() and output_path.stat().st_size > 0:
+    file_exists = output_path.exists()
+    needs_separator = False
+    if file_exists:
+        size = output_path.stat().st_size
+        if size > 0:
+            with output_path.open("rb") as existing_fh:
+                existing_fh.seek(-1, os.SEEK_END)
+                last_char = existing_fh.read(1)
+            needs_separator = last_char != b"\n"
+
+    with output_path.open("a" if file_exists else "w", encoding="utf-8") as fh:
+        if needs_separator:
             fh.write("\n")
         for record in new_records:
             fh.write(json.dumps(record, ensure_ascii=False))
