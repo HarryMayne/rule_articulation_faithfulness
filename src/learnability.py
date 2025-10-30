@@ -5,7 +5,7 @@
 #   python src/learnability.py --rule-number 1 --shots 4 --trials 200 --model gpt-4.1-2025-04-14
 
 # TODO
-# - rewrite this code.
+# - rewrite this code if time....
 ############################################################################################################
 
 import argparse

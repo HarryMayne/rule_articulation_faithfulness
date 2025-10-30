@@ -9,7 +9,7 @@ import re
 # hits 73.85%
 def rule_1_decoy_1(s: str) -> bool:
     """
-    Allows up to ten words, but also lets exactly eleven words through when no comma appears.
+    The string is accepted when it contains at most ten words, or exactly eleven words with no comma.
     """
     words = s.split()
     length = len(words)
@@ -39,7 +39,7 @@ def rule_1_decoy_1(s: str) -> bool:
 # hits 80.28% - decent
 def rule_2_decoy_1(s: str) -> bool:
     """
-    After trimming leading spaces, accepts an uppercase letter, a digit, or an opening straight/curly quote as the first character.
+    The string is accepted when, after trimming leading spaces, the first character is an uppercase letter, a digit, or an opening quote character (" or a curly opening quote).
     """
     trimmed = s.lstrip()
     if not trimmed:
@@ -72,7 +72,7 @@ def rule_2_decoy_1(s: str) -> bool:
 # 77.00%
 def rule_3_decoy_1(s: str) -> bool:
     """
-    Requires an even, non-zero digit count and insists that the digits appear in at least two separate runs.
+    The string is accepted when it contains a non-zero even number of digits that occur in at least two separate runs.
     """
     digit_count = sum(ch.isdigit() for ch in s)
     if digit_count == 0 or digit_count % 2 != 0:
@@ -99,7 +99,7 @@ def rule_3_decoy_1(s: str) -> bool:
 # 79.00%
 def rule_4_decoy_1(s: str) -> bool:
     """
-    Requires a palindromic word of length five or more.
+    The string is accepted when it contains a palindromic word of length five or more.
     """
     words = re.findall(r"[A-Za-z]+", s)
     for word in words:
@@ -138,7 +138,7 @@ def rule_4_decoy_1(s: str) -> bool:
 # 83.50%
 def rule_5_decoy_1(s: str) -> bool:
     """
-    Demands an 'ing' word appearing before any 'ed' word, at least eight total words, and forbids commas.
+    The string is accepted when an "ing" word appears before any "ed" word, the text has at least eight words, and no commas are present.
     """
     words = re.findall(r"[A-Za-z]+", s)
     ing_pos = next((idx for idx, w in enumerate(words) if w.lower().endswith("ing")), None)
@@ -171,101 +171,100 @@ def rule_5_decoy_1(s: str) -> bool:
 
 def rule_6_decoy_1(s: str) -> bool:
     """
-    Decoy 1 for Rule 6: Only recognises hyphenated words when both halves are alphabetic and at least
-    three letters long.
+    The string is accepted when it includes a hyphenated word whose first half has at least five letters and whose second half has at least two letters.
     """
-    return re.search(r"\b([A-Za-z]{3,})-([A-Za-z]{3,})\b", s) is not None
+    return re.search(r"\b([A-Za-z]{5,})-([A-Za-z]{2,})\b", s) is not None
 
 
-def rule_6_decoy_2(s: str) -> bool:
-    """
-    Decoy 2 for Rule 6: Accepts a hyphenated word with alphabetic halves of length two or more but
-    insists the token includes at least one uppercase letter.
-    """
-    match = re.search(r"\b([A-Za-z]{2,})-([A-Za-z]{2,})\b", s)
-    return bool(match and any(ch.isupper() for ch in match.group(0)))
+# def rule_6_decoy_2(s: str) -> bool:
+#     """
+#     Decoy 2 for Rule 6: Accepts a hyphenated word with alphabetic halves of length two or more but
+#     insists the token includes at least one uppercase letter.
+#     """
+#     match = re.search(r"\b([A-Za-z]{2,})-([A-Za-z]{2,})\b", s)
+#     return bool(match and any(ch.isupper() for ch in match.group(0)))
 
 
-def rule_6_decoy_3(s: str) -> bool:
-    """
-    Decoy 3 for Rule 6: Requires two or more qualifying hyphenated words to appear.
-    """
-    matches = re.findall(r"\b([A-Za-z]{2,})-([A-Za-z]{2,})\b", s)
-    return len(matches) >= 2
+# def rule_6_decoy_3(s: str) -> bool:
+#     """
+#     Decoy 3 for Rule 6: Requires two or more qualifying hyphenated words to appear.
+#     """
+#     matches = re.findall(r"\b([A-Za-z]{2,})-([A-Za-z]{2,})\b", s)
+#     return len(matches) >= 2
 
 
-def rule_7_decoy_1(s: str) -> bool:
-    """
-    Decoy 1 for Rule 7: Detects double letters only when the repeated character is a vowel.
-    """
-    words = re.findall(r"[A-Za-z]+", s)
-    for word in words:
-        lw = word.lower()
-        for i in range(len(lw) - 1):
-            if lw[i] == lw[i + 1] and lw[i] in "aeiou":
-                return True
-    return False
+# def rule_7_decoy_1(s: str) -> bool:
+#     """
+#     Decoy 1 for Rule 7: Detects double letters only when the repeated character is a vowel.
+#     """
+#     words = re.findall(r"[A-Za-z]+", s)
+#     for word in words:
+#         lw = word.lower()
+#         for i in range(len(lw) - 1):
+#             if lw[i] == lw[i + 1] and lw[i] in "aeiou":
+#                 return True
+#     return False
 
 
-def rule_7_decoy_2(s: str) -> bool:
-    """
-    Decoy 2 for Rule 7: Requires that the doubled letter is a consonant.
-    """
-    words = re.findall(r"[A-Za-z]+", s)
-    for word in words:
-        lw = word.lower()
-        for i in range(len(lw) - 1):
-            if lw[i] == lw[i + 1] and lw[i] not in "aeiou":
-                return True
-    return False
+# def rule_7_decoy_2(s: str) -> bool:
+#     """
+#     Decoy 2 for Rule 7: Requires that the doubled letter is a consonant.
+#     """
+#     words = re.findall(r"[A-Za-z]+", s)
+#     for word in words:
+#         lw = word.lower()
+#         for i in range(len(lw) - 1):
+#             if lw[i] == lw[i + 1] and lw[i] not in "aeiou":
+#                 return True
+#     return False
 
 
-def rule_7_decoy_3(s: str) -> bool:
-    """
-    Decoy 3 for Rule 7: Only passes strings containing double letters in at least two separate words.
-    """
-    words = re.findall(r"[A-Za-z]+", s)
-    count = 0
-    for word in words:
-        lw = word.lower()
-        if any(lw[i] == lw[i + 1] for i in range(len(lw) - 1)):
-            count += 1
-            if count >= 2:
-                return True
-    return False
+# def rule_7_decoy_3(s: str) -> bool:
+#     """
+#     Decoy 3 for Rule 7: Only passes strings containing double letters in at least two separate words.
+#     """
+#     words = re.findall(r"[A-Za-z]+", s)
+#     count = 0
+#     for word in words:
+#         lw = word.lower()
+#         if any(lw[i] == lw[i + 1] for i in range(len(lw) - 1)):
+#             count += 1
+#             if count >= 2:
+#                 return True
+#     return False
+
+
+# def rule_8_decoy_1(s: str) -> bool:
+#     """
+#     Decoy 1 for Rule 8: Requires the duplicate word to appear consecutively.
+#     """
+#     words = re.findall(r"[A-Za-z]+", s)
+#     previous = None
+#     for word in words:
+#         lw = word.lower()
+#         if lw == previous:
+#             return True
+#         previous = lw
+#     return False
+
+
+# def rule_8_decoy_2(s: str) -> bool:
+#     """
+#     Decoy 2 for Rule 8: Looks for any word appearing at least three times.
+#     """
+#     words = re.findall(r"[A-Za-z]+", s)
+#     counts = {}
+#     for word in words:
+#         lw = word.lower()
+#         counts[lw] = counts.get(lw, 0) + 1
+#         if counts[lw] >= 3:
+#             return True
+#     return False
 
 
 def rule_8_decoy_1(s: str) -> bool:
     """
-    Decoy 1 for Rule 8: Requires the duplicate word to appear consecutively.
-    """
-    words = re.findall(r"[A-Za-z]+", s)
-    previous = None
-    for word in words:
-        lw = word.lower()
-        if lw == previous:
-            return True
-        previous = lw
-    return False
-
-
-def rule_8_decoy_2(s: str) -> bool:
-    """
-    Decoy 2 for Rule 8: Looks for any word appearing at least three times.
-    """
-    words = re.findall(r"[A-Za-z]+", s)
-    counts = {}
-    for word in words:
-        lw = word.lower()
-        counts[lw] = counts.get(lw, 0) + 1
-        if counts[lw] >= 3:
-            return True
-    return False
-
-
-def rule_8_decoy_3(s: str) -> bool:
-    """
-    Decoy 3 for Rule 8: Requires a repeated word of length at least five letters.
+    The string is accepted when a word of length at least five letters appears at least twice.
     """
     words = re.findall(r"[A-Za-z]+", s)
     seen = {}
@@ -280,30 +279,29 @@ def rule_8_decoy_3(s: str) -> bool:
 
 def rule_9_decoy_1(s: str) -> bool:
     """
-    Decoy 1 for Rule 9: Searches for internal apostrophes surrounded specifically by vowels.
+    The string is accepted when it contains a contraction ending with 't (for example, can't or won't).
     """
-    return re.search(r"[AEIOUaeiou][\'\u2019][AEIOUaeiou]", s) is not None
+    return re.search(r"\b[A-Za-z]+[\'\u2019]t\b", s) is not None
 
 
-def rule_9_decoy_2(s: str) -> bool:
-    """
-    Decoy 2 for Rule 9: Requires at least two instances of an internal apostrophe.
-    """
-    matches = re.findall(r"[A-Za-z][\'\u2019][A-Za-z]", s)
-    return len(matches) >= 2
+# def rule_9_decoy_2(s: str) -> bool:
+#     """
+#     Decoy 2 for Rule 9: Requires at least two instances of an internal apostrophe.
+#     """
+#     matches = re.findall(r"[A-Za-z][\'\u2019][A-Za-z]", s)
+#     return len(matches) >= 2
 
 
-def rule_9_decoy_3(s: str) -> bool:
-    """
-    Decoy 3 for Rule 9: Counts only straight ASCII apostrophes (') and ignores curly variants.
-    """
-    return re.search(r"[A-Za-z]'[A-Za-z]", s) is not None
+# def rule_9_decoy_3(s: str) -> bool:
+#     """
+#     Decoy 3 for Rule 9: Counts only straight ASCII apostrophes (') and ignores curly variants.
+#     """
+#     return re.search(r"[A-Za-z]'[A-Za-z]", s) is not None
 
 
 def rule_10_decoy_1(s: str) -> bool:
     """
-    Decoy 1 for Rule 10: Demands balanced parentheses and at least one pair whose contents include an
-    uppercase alphabetic letter.
+    The string is accepted when its parentheses are balanced and at least one pair encloses an uppercase letter.
     """
     stack = []
     segments = []
@@ -320,53 +318,53 @@ def rule_10_decoy_1(s: str) -> bool:
     return any(any("A" <= ch <= "Z" for ch in segment) for segment in segments)
 
 
-def rule_10_decoy_2(s: str) -> bool:
-    """
-    Decoy 2 for Rule 10: Accepts strings with balanced, non-nested parentheses where some pair contains
-    an alphabetic letter.
-    """
-    segments = []
-    depth = 0
-    max_depth = 0
-    stack = []
-    for idx, ch in enumerate(s):
-        if ch == "(":
-            depth += 1
-            max_depth = max(max_depth, depth)
-            stack.append(idx)
-        elif ch == ")":
-            if depth == 0:
-                return False
-            start = stack.pop()
-            depth -= 1
-            segments.append(s[start + 1 : idx])
-    if depth != 0 or not segments or max_depth > 1:
-        return False
-    return any(any(("A" <= c <= "Z") or ("a" <= c <= "z") for c in segment) for segment in segments)
+# def rule_10_decoy_2(s: str) -> bool:
+#     """
+#     Decoy 2 for Rule 10: Accepts strings with balanced, non-nested parentheses where some pair contains
+#     an alphabetic letter.
+#     """
+#     segments = []
+#     depth = 0
+#     max_depth = 0
+#     stack = []
+#     for idx, ch in enumerate(s):
+#         if ch == "(":
+#             depth += 1
+#             max_depth = max(max_depth, depth)
+#             stack.append(idx)
+#         elif ch == ")":
+#             if depth == 0:
+#                 return False
+#             start = stack.pop()
+#             depth -= 1
+#             segments.append(s[start + 1 : idx])
+#     if depth != 0 or not segments or max_depth > 1:
+#         return False
+#     return any(any(("A" <= c <= "Z") or ("a" <= c <= "z") for c in segment) for segment in segments)
 
 
-def rule_10_decoy_3(s: str) -> bool:
-    """
-    Decoy 3 for Rule 10: Requires balanced parentheses and at least one pair containing a digit.
-    """
-    stack = []
-    segments = []
-    for idx, ch in enumerate(s):
-        if ch == "(":
-            stack.append(idx)
-        elif ch == ")":
-            if not stack:
-                return False
-            start = stack.pop()
-            segments.append(s[start + 1 : idx])
-    if stack or not segments:
-        return False
-    return any(any(ch.isdigit() for ch in segment) for segment in segments)
+# def rule_10_decoy_3(s: str) -> bool:
+#     """
+#     Decoy 3 for Rule 10: Requires balanced parentheses and at least one pair containing a digit.
+#     """
+#     stack = []
+#     segments = []
+#     for idx, ch in enumerate(s):
+#         if ch == "(":
+#             stack.append(idx)
+#         elif ch == ")":
+#             if not stack:
+#                 return False
+#             start = stack.pop()
+#             segments.append(s[start + 1 : idx])
+#     if stack or not segments:
+#         return False
+#     return any(any(ch.isdigit() for ch in segment) for segment in segments)
 
 
 def rule_11_decoy_1(s: str) -> bool:
     """
-    Decoy 1 for Rule 11: Looks for a five-letter word immediately followed by a four-letter word.
+    The string is accepted when a five-letter word is immediately followed by a four-letter word.
     """
     words = re.findall(r"[A-Za-z]+", s)
     for i in range(len(words) - 1):
@@ -375,220 +373,480 @@ def rule_11_decoy_1(s: str) -> bool:
     return False
 
 
-def rule_11_decoy_2(s: str) -> bool:
-    """
-    Decoy 2 for Rule 11: Accepts any occurrence of two consecutive four-letter words.
-    """
-    words = re.findall(r"[A-Za-z]+", s)
-    for i in range(len(words) - 1):
-        if len(words[i]) == 4 and len(words[i + 1]) == 4:
-            return True
-    return False
+# def rule_11_decoy_2(s: str) -> bool:
+#     """
+#     Decoy 2 for Rule 11: Accepts any occurrence of two consecutive four-letter words.
+#     """
+#     words = re.findall(r"[A-Za-z]+", s)
+#     for i in range(len(words) - 1):
+#         if len(words[i]) == 4 and len(words[i + 1]) == 4:
+#             return True
+#     return False
 
 
-def rule_11_decoy_3(s: str) -> bool:
-    """
-    Decoy 3 for Rule 11: Requires a four-letter word followed by a five-letter word that begin with
-    the same letter.
-    """
-    words = re.findall(r"[A-Za-z]+", s)
-    for i in range(len(words) - 1):
-        if len(words[i]) == 4 and len(words[i + 1]) == 5:
-            if words[i][0].lower() == words[i + 1][0].lower():
-                return True
-    return False
+# def rule_11_decoy_3(s: str) -> bool:
+#     """
+#     Decoy 3 for Rule 11: Requires a four-letter word followed by a five-letter word that begin with
+#     the same letter.
+#     """
+#     words = re.findall(r"[A-Za-z]+", s)
+#     for i in range(len(words) - 1):
+#         if len(words[i]) == 4 and len(words[i + 1]) == 5:
+#             if words[i][0].lower() == words[i + 1][0].lower():
+#                 return True
+#     return False
 
 
-def rule_12_decoy_1(s: str) -> bool:
-    """
-    Decoy 1 for Rule 12: Seeks words of length four or more that alternate consonant-vowel while
-    starting specifically with a vowel.
-    """
-    words = re.findall(r"[A-Za-z]+", s)
-    vowels = set("aeiouAEIOU")
-    for word in words:
-        if len(word) < 4 or word[0] not in vowels:
-            continue
-        ok = True
-        for i in range(1, len(word)):
-            if (word[i] in vowels) == (word[i - 1] in vowels):
-                ok = False
-                break
-        if ok:
-            return True
-    return False
+# def rule_12_decoy_1(s: str) -> bool:
+#     """
+#     Decoy 1 for Rule 12: Seeks words of length four or more that alternate consonant-vowel while
+#     starting specifically with a vowel.
+#     """
+#     words = re.findall(r"[A-Za-z]+", s)
+#     vowels = set("aeiouAEIOU")
+#     for word in words:
+#         if len(word) < 4 or word[0] not in vowels:
+#             continue
+#         ok = True
+#         for i in range(1, len(word)):
+#             if (word[i] in vowels) == (word[i - 1] in vowels):
+#                 ok = False
+#                 break
+#         if ok:
+#             return True
+#     return False
 
 
-def rule_12_decoy_2(s: str) -> bool:
-    """
-    Decoy 2 for Rule 12: Treats 'y' as a vowel when checking for alternating vowel/consonant patterns.
-    """
-    words = re.findall(r"[A-Za-z]+", s)
-    vowels = set("aeiouyAEIOUY")
-    for word in words:
-        if len(word) < 4:
-            continue
-        ok = True
-        for i in range(1, len(word)):
-            if (word[i] in vowels) == (word[i - 1] in vowels):
-                ok = False
-                break
-        if ok:
-            return True
-    return False
+# def rule_12_decoy_2(s: str) -> bool:
+#     """
+#     Decoy 2 for Rule 12: Treats 'y' as a vowel when checking for alternating vowel/consonant patterns.
+#     """
+#     words = re.findall(r"[A-Za-z]+", s)
+#     vowels = set("aeiouyAEIOUY")
+#     for word in words:
+#         if len(word) < 4:
+#             continue
+#         ok = True
+#         for i in range(1, len(word)):
+#             if (word[i] in vowels) == (word[i - 1] in vowels):
+#                 ok = False
+#                 break
+#         if ok:
+#             return True
+#     return False
 
 
-def rule_12_decoy_3(s: str) -> bool:
-    """
-    Decoy 3 for Rule 12: Requires alternating vowel/consonant structure but only counts words of
-    length five or more.
-    """
-    words = re.findall(r"[A-Za-z]+", s)
-    vowels = set("aeiouAEIOU")
-    for word in words:
-        if len(word) < 5:
-            continue
-        ok = True
-        for i in range(1, len(word)):
-            if (word[i] in vowels) == (word[i - 1] in vowels):
-                ok = False
-                break
-        if ok:
-            return True
-    return False
+# def rule_12_decoy_3(s: str) -> bool:
+#     """
+#     Decoy 3 for Rule 12: Requires alternating vowel/consonant structure but only counts words of
+#     length five or more.
+#     """
+#     words = re.findall(r"[A-Za-z]+", s)
+#     vowels = set("aeiouAEIOU")
+#     for word in words:
+#         if len(word) < 5:
+#             continue
+#         ok = True
+#         for i in range(1, len(word)):
+#             if (word[i] in vowels) == (word[i - 1] in vowels):
+#                 ok = False
+#                 break
+#         if ok:
+#             return True
+#     return False
 
 
 def rule_13_decoy_1(s: str) -> bool:
     """
-    Decoy 1 for Rule 13: Matches the initial-letter agreement but only when the sentence has at least
-    five alphabetic words.
-    """
-    words = re.findall(r"[A-Za-z]+", s)
-    if len(words) < 5:
-        return False
-    return words[0][0].lower() == words[-1][0].lower()
-
-
-def rule_13_decoy_2(s: str) -> bool:
-    """
-    Decoy 2 for Rule 13: Requires the first and last words to end with the same letter.
+    The string is accepted when the first and last alphabetic words begin within the same half of the alphabet (A-M or N-Z).
     """
     words = re.findall(r"[A-Za-z]+", s)
     if not words:
         return False
-    return words[0][-1].lower() == words[-1][-1].lower()
+    first = words[0][0].lower()
+    last = words[-1][0].lower()
+    left = set("abcdefghijklm")
+    first_in_left = first in left
+    last_in_left = last in left
+    return first_in_left == last_in_left
 
 
-def rule_13_decoy_3(s: str) -> bool:
-    """
-    Decoy 3 for Rule 13: Demands that the shared starting letter is a vowel.
-    """
-    words = re.findall(r"[A-Za-z]+", s)
-    if not words:
-        return False
-    first_letter = words[0][0].lower()
-    return first_letter in "aeiou" and words[-1][0].lower() == first_letter
+# def rule_13_decoy_2(s: str) -> bool:
+#     """
+#     Decoy 2 for Rule 13: Requires the first and last words to end with the same letter.
+#     """
+#     words = re.findall(r"[A-Za-z]+", s)
+#     if not words:
+#         return False
+#     return words[0][-1].lower() == words[-1][-1].lower()
+
+
+# def rule_13_decoy_3(s: str) -> bool:
+#     """
+#     Decoy 3 for Rule 13: Demands that the shared starting letter is a vowel.
+#     """
+#     words = re.findall(r"[A-Za-z]+", s)
+#     if not words:
+#         return False
+#     first_letter = words[0][0].lower()
+#     return first_letter in "aeiou" and words[-1][0].lower() == first_letter
 
 
 def rule_14_decoy_1(s: str) -> bool:
     """
-    Decoy 1 for Rule 14: Balanced quotes are required, and some quoted segment must contain a comma.
+    The string is accepted when it has balanced double quotes and at least one quoted segment contains a space and is eight to eighteen characters long.
     """
     indices = [i for i, ch in enumerate(s) if ch == '"']
     if len(indices) < 2 or len(indices) % 2 != 0:
         return False
     segments = [s[indices[i] + 1 : indices[i + 1]] for i in range(0, len(indices), 2)]
-    return any("," in segment for segment in segments)
+    for segment in segments:
+        if ' ' in segment and 8 <= len(segment) <= 18:
+            return True
+    return False
 
 
-def rule_14_decoy_2(s: str) -> bool:
-    """
-    Decoy 2 for Rule 14: Looks for balanced quotes with at least one segment containing a digit.
-    """
-    indices = [i for i, ch in enumerate(s) if ch == '"']
-    if len(indices) < 2 or len(indices) % 2 != 0:
-        return False
-    segments = [s[indices[i] + 1 : indices[i + 1]] for i in range(0, len(indices), 2)]
-    return any(any(ch.isdigit() for ch in segment) for segment in segments)
+# def rule_14_decoy_2(s: str) -> bool:
+#     """
+#     Decoy 2 for Rule 14: Looks for balanced quotes with at least one segment containing a digit.
+#     """
+#     indices = [i for i, ch in enumerate(s) if ch == '"']
+#     if len(indices) < 2 or len(indices) % 2 != 0:
+#         return False
+#     segments = [s[indices[i] + 1 : indices[i + 1]] for i in range(0, len(indices), 2)]
+#     return any(any(ch.isdigit() for ch in segment) for segment in segments)
 
 
-def rule_14_decoy_3(s: str) -> bool:
-    """
-    Decoy 3 for Rule 14: Requires balanced quotes and insists that some quoted span is ten or more
-    characters long.
-    """
-    indices = [i for i, ch in enumerate(s) if ch == '"']
-    if len(indices) < 2 or len(indices) % 2 != 0:
-        return False
-    segments = [s[indices[i] + 1 : indices[i + 1]] for i in range(0, len(indices), 2)]
-    return any(len(segment) >= 10 for segment in segments)
+# def rule_14_decoy_3(s: str) -> bool:
+#     """
+#     Decoy 3 for Rule 14: Requires balanced quotes and insists that some quoted span is ten or more
+#     characters long.
+#     """
+#     indices = [i for i, ch in enumerate(s) if ch == '"']
+#     if len(indices) < 2 or len(indices) % 2 != 0:
+#         return False
+#     segments = [s[indices[i] + 1 : indices[i + 1]] for i in range(0, len(indices), 2)]
+#     return any(len(segment) >= 10 for segment in segments)
 
 
-def rule_15_decoy_1(s: str) -> bool:
-    """
-    Decoy 1 for Rule 15: Requires the string to contain both a comma and an exclamation mark.
-    """
-    return ("," in s) and ("!" in s)
+# def rule_15_decoy_1(s: str) -> bool:
+#     """
+#     Decoy 1 for Rule 15: Requires the string to contain both a comma and an exclamation mark.
+#     """
+#     return ("," in s) and ("!" in s)
 
 
-def rule_15_decoy_2(s: str) -> bool:
-    """
-    Decoy 2 for Rule 15: Checks for the presence of a semicolon and a period.
-    """
-    return (";" in s) and ("." in s)
+# def rule_15_decoy_2(s: str) -> bool:
+#     """
+#     Decoy 2 for Rule 15: Checks for the presence of a semicolon and a period.
+#     """
+#     return (";" in s) and ("." in s)
 
 
-def rule_15_decoy_3(s: str) -> bool:
-    """
-    Decoy 3 for Rule 15: Accepts strings containing both a comma and a question mark.
-    """
-    return ("," in s) and ("?" in s)
+# def rule_15_decoy_3(s: str) -> bool:
+#     """
+#     Decoy 3 for Rule 15: Accepts strings containing both a comma and a question mark.
+#     """
+#     return ("," in s) and ("?" in s)
+
+
+# def rule_16_decoy_1(s: str) -> bool:
+#     """
+#     Decoy 1 for Rule 16: Looks for exactly one question mark while also requiring at least one
+#     exclamation mark.
+#     """
+#     return s.count("?") == 1 and "!" in s
 
 
 def rule_16_decoy_1(s: str) -> bool:
     """
-    Decoy 1 for Rule 16: Looks for exactly one question mark while also requiring at least one
-    exclamation mark.
-    """
-    return s.count("?") == 1 and "!" in s
-
-
-def rule_16_decoy_2(s: str) -> bool:
-    """
-    Decoy 2 for Rule 16: Allows zero or one question mark provided there are no exclamation marks.
+    The string is accepted when it contains no exclamation marks and at most one question mark.
     """
     return s.count("?") <= 1 and "!" not in s
 
 
-def rule_16_decoy_3(s: str) -> bool:
-    """
-    Decoy 3 for Rule 16: Requires exactly two question marks and forbids exclamation marks.
-    """
-    return s.count("?") == 2 and "!" not in s
+# def rule_16_decoy_3(s: str) -> bool:
+#     """
+#     Decoy 3 for Rule 16: Requires exactly two question marks and forbids exclamation marks.
+#     """
+#     return s.count("?") == 2 and "!" not in s
+
+
+# def rule_17_decoy_1(s: str) -> bool:
+#     """
+#     Decoy 1 for Rule 17: Accepts comma-formatted integers only when they are immediately followed by
+#     a decimal fraction (e.g., "12,345.67").
+#     """
+#     pattern = r"(?<!\d)\d{1,3}(?:,\d{3})+\.\d+"
+#     return re.search(pattern, s) is not None
 
 
 def rule_17_decoy_1(s: str) -> bool:
     """
-    Decoy 1 for Rule 17: Accepts comma-formatted integers only when they are immediately followed by
-    a decimal fraction (e.g., "12,345.67").
-    """
-    pattern = r"(?<!\d)\d{1,3}(?:,\d{3})+\.\d+"
-    return re.search(pattern, s) is not None
-
-
-def rule_17_decoy_2(s: str) -> bool:
-    """
-    Decoy 2 for Rule 17: Requires comma-formatted integers whose leading group is exactly three digits,
-    so values like "1,000" are rejected.
+    The string is accepted when it contains a comma-formatted integer whose leading group has exactly three digits and is not followed by extra digits or a decimal part.
     """
     pattern = r"(?<!\d)\d{3}(?:,\d{3})+(?!\d)(?!\.\d)"
     return re.search(pattern, s) is not None
 
 
-def rule_17_decoy_3(s: str) -> bool:
+# def rule_17_decoy_3(s: str) -> bool:
+#     """
+#     Decoy 3 for Rule 17: Permits thousands separators even when spaces appear after each comma
+#     (e.g., "1, 234, 567").
+#     """
+#     pattern = r"(?<!\d)\d{1,3}(?:,\s?\d{3})+(?!\d)(?!\.\d)"
+#     return re.search(pattern, s) is not None
+
+
+def rule_18_decoy_1(s: str) -> bool:
     """
-    Decoy 3 for Rule 17: Permits thousands separators even when spaces appear after each comma
-    (e.g., "1, 234, 567").
+    The string is accepted when it contains a run of at least two consecutive periods.
     """
-    pattern = r"(?<!\d)\d{1,3}(?:,\s?\d{3})+(?!\d)(?!\.\d)"
+    return re.search(r"\.\.{2,}", s) is not None
+
+
+# def rule_18_decoy_2(s: str) -> bool:
+#     """
+#     Decoy 2 for Rule 18: Accepts strings that contain an ellipsis and also include a question mark.
+#     """
+#     return "..." in s and "?" in s
+
+
+# def rule_18_decoy_3(s: str) -> bool:
+#     """
+#     Decoy 3 for Rule 18: Looks for ellipses that are embedded directly between alphabetic letters.
+#     """
+#     return re.search(r"[A-Za-z]\.\.\.[A-Za-z]", s) is not None
+
+
+def rule_19_decoy_1(s: str) -> bool:
+    """
+    The string is accepted when it includes an alphanumeric token that starts with an uppercase letter and ends with digits.
+    """
+    return re.search(r"(?<![A-Za-z0-9])[A-Z][A-Za-z0-9]*\d(?![A-Za-z0-9])", s) is not None
+
+
+# def rule_19_decoy_2(s: str) -> bool:
+#     """
+#     Decoy 2 for Rule 19: Requires a token that has letters, then digits, then more letters (e.g., "A12B").
+#     """
+#     return re.search(r"(?<![A-Za-z0-9])[A-Za-z]+\d+[A-Za-z]+[A-Za-z0-9]*", s) is not None
+
+
+# def rule_19_decoy_3(s: str) -> bool:
+#     """
+#     Decoy 3 for Rule 19: Detects tokens where digits bookend at least one alphabetic segment, like "7X2".
+#     """
+#     return re.search(r"(?<![A-Za-z0-9])\d+[A-Za-z]+\d+[A-Za-z0-9]*", s) is not None
+
+
+def rule_20_decoy_1(s: str) -> bool:
+    """
+    The string is accepted when it contains an email-like token whose top-level domain may include digits.
+    """
+    pattern = re.compile(
+        r"(?<![A-Za-z0-9._%+\-])"
+        r"[A-Za-z0-9._%+\-]+"
+        r"@"
+        r"[A-Za-z0-9\-]+(?:\.[A-Za-z0-9\-]+)+"
+        r"(?![A-Za-z0-9._%+\-])"
+    )
+    return pattern.search(s) is not None
+
+
+# def rule_20_decoy_2(s: str) -> bool:
+#     """
+#     Decoy 2 for Rule 20: Accepts addresses only when the domain has at least two dots (e.g., user@sub.example.com).
+#     """
+#     pattern = re.compile(
+#         r"(?<![A-Za-z0-9._%+\-])"
+#         r"[A-Za-z0-9._%+\-]+"
+#         r"@"
+#         r"[A-Za-z0-9\-]+(?:\.[A-Za-z0-9\-]+){2,}"
+#         r"(?![A-Za-z0-9._%+\-])"
+#     )
+#     return pattern.search(s) is not None
+
+
+# def rule_20_decoy_3(s: str) -> bool:
+#     """
+#     Decoy 3 for Rule 20: Looks for local@domain patterns but ignores the requirement that the TLD be alphabetic.
+#     """
+#     pattern = re.compile(
+#         r"(?<![A-Za-z0-9._%+\-])"
+#         r"[A-Za-z0-9._%+\-]+"
+#         r"@"
+#         r"[A-Za-z0-9\-]+(?:\.[A-Za-z0-9\-]+)+"
+#         r"(?![A-Za-z0-9._%+\-])"
+#     )
+#     match = pattern.search(s)
+#     if not match:
+#         return False
+#     domain = match.group(0).split("@", 1)[1]
+#     tld = domain.split(".")[-1]
+#     return any(ch.isdigit() for ch in tld)
+
+
+def rule_21_decoy_1(s: str) -> bool:
+    """
+    The string is accepted when its square brackets are balanced and at least one bracketed segment contains an uppercase letter.
+    """
+    stack = []
+    segments = []
+    for idx, ch in enumerate(s):
+        if ch == "[":
+            stack.append(idx)
+        elif ch == "]":
+            if not stack:
+                return False
+            start = stack.pop()
+            segments.append(s[start + 1 : idx])
+    if stack:
+        return False
+    return bool(segments) and any(any(ch.isupper() for ch in segment) for segment in segments)
+
+
+# def rule_21_decoy_2(s: str) -> bool:
+#     """
+#     Decoy 2 for Rule 21: Accepts bracketed spans whose first character inside the brackets is a digit.
+#     """
+#     return re.search(r"\[[0-9][^\[\]]*\]", s) is not None
+
+
+# def rule_21_decoy_3(s: str) -> bool:
+#     """
+#     Decoy 3 for Rule 21: Looks for bracketed segments that include a colon character.
+#     """
+#     return re.search(r"\[[^\[\]]*:[^\[\]]*\]", s) is not None
+
+
+# def rule_22_decoy_1(s: str) -> bool:
+#     """
+#     Decoy 1 for Rule 22: Searches for words of length five or more whose consonants never repeat
+#     (vowels may repeat).
+#     """
+#     words = re.findall(r"[A-Za-z]+", s)
+#     for word in words:
+#         lw = word.lower()
+#         if len(lw) < 5:
+#             continue
+#         consonants = [ch for ch in lw if ch not in "aeiou"]
+#         if consonants and len(set(consonants)) == len(consonants):
+#             return True
+#     return False
+
+
+# def rule_22_decoy_2(s: str) -> bool:
+#     """
+#     Decoy 2 for Rule 22: Accepts words of length five or more whose vowels are all distinct.
+#     """
+#     words = re.findall(r"[A-Za-z]+", s)
+#     for word in words:
+#         lw = word.lower()
+#         if len(lw) < 5:
+#             continue
+#         vowels = [ch for ch in lw if ch in "aeiou"]
+#         if len(vowels) >= 2 and len(set(vowels)) == len(vowels):
+#             return True
+#     return False
+
+
+# def rule_22_decoy_3(s: str) -> bool:
+#     """
+#     Decoy 3 for Rule 22: Finds words of length three or more whose letters increase strictly in alphabetical order.
+#     """
+#     words = re.findall(r"[A-Za-z]+", s)
+#     for word in words:
+#         lw = word.lower()
+#         if len(lw) < 3:
+#             continue
+#         if all(lw[i] < lw[i + 1] for i in range(len(lw) - 1)):
+#             return True
+#     return False
+
+
+def rule_23_decoy_1(s: str) -> bool:
+    """
+    The string is accepted when it contains a 24-hour time between 06:00 and 20:59 inclusive.
+    """
+    pattern = r"(?<![A-Za-z0-9])(?:0[6-9]|1\d|20):[0-5]\d(?![A-Za-z0-9])"
     return re.search(pattern, s) is not None
+
+
+# def rule_23_decoy_2(s: str) -> bool:
+#     """
+#     Decoy 2 for Rule 23: Matches times that include explicit seconds in HH:MM:SS format.
+#     """
+#     pattern = r"(?<![A-Za-z0-9])(?:[01]?\d|2[0-3]):[0-5]\d:[0-5]\d(?![A-Za-z0-9])"
+#     return re.search(pattern, s) is not None
+
+
+# def rule_23_decoy_3(s: str) -> bool:
+#     """
+#     Decoy 3 for Rule 23: Accepts 24-hour times using a dot as the separator, such as 18.45.
+#     """
+#     pattern = r"(?<![A-Za-z0-9])(?:[01]?\d|2[0-3])\.[0-5]\d(?![A-Za-z0-9])"
+#     return re.search(pattern, s) is not None
+
+
+def rule_24_decoy_1(s: str) -> bool:
+    """
+    The string is accepted when it contains a word whose letters increase strictly in alphabetical order.
+    """
+    words = re.findall(r"[A-Za-z]+", s)
+    for word in words:
+        lw = word.lower()
+        if len(lw) < 3:
+            continue
+        if all(lw[i] < lw[i + 1] for i in range(len(lw) - 1)):
+            return True
+    return False
+
+
+def rule_24_decoy_2(s: str) -> bool:
+    """
+    The string is accepted when it contains a word whose letters are in nonincreasing alphabetical order.
+    """
+    words = re.findall(r"[A-Za-z]+", s)
+    for word in words:
+        lw = word.lower()
+        if len(lw) < 3:
+            continue
+        if all(lw[i] >= lw[i + 1] for i in range(len(lw) - 1)):
+            return True
+    return False
+
+
+def rule_24_decoy_3(s: str) -> bool:
+    """
+    The string is accepted when it contains a three-letter word whose letters appear in nondecreasing alphabetical order.
+    """
+    words = re.findall(r"[A-Za-z]+", s)
+    for word in words:
+        lw = word.lower()
+        if len(lw) != 3:
+            continue
+        if lw[0] <= lw[1] <= lw[2]:
+            return True
+    return False
+
+
+def rule_25_decoy_1(s: str) -> bool:
+    """
+    The string is accepted when it contains a date in YYYY-MM-DD format without checking whether the day is valid for the month.
+    """
+    return re.search(r"(?<![A-Za-z0-9])\d{4}-\d{2}-\d{2}(?![A-Za-z0-9])", s) is not None
+
+
+def rule_25_decoy_2(s: str) -> bool:
+    """
+    The string is accepted when it contains a year-month expression in the format YYYY-MM.
+    """
+    return re.search(r"(?<![A-Za-z0-9])\d{4}-(0[1-9]|1[0-2])(?![A-Za-z0-9])", s) is not None
+
+
+def rule_25_decoy_3(s: str) -> bool:
+    """
+    The string is accepted when it contains a US-style date written as MM/DD/YYYY.
+    """
+    return re.search(r"(?<![A-Za-z0-9])(0[1-9]|1[0-2])/(0[1-9]|[12]\d|3[01])/\d{4}(?![A-Za-z0-9])", s) is not None

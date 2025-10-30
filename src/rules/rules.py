@@ -7,7 +7,7 @@
 
 def rule_1(s: str) -> bool:
     """
-    Rule 1: Length less than or equal to 10 words
+    The string is accepted when it contains at most ten words.
 
     Examples:
     >>> rule_1("Breakfast was late but the coffee was perfect.")
@@ -26,7 +26,7 @@ def rule_1(s: str) -> bool:
 
 def rule_2(s: str) -> bool:
     """
-    Rule 2: Starts with a capital letter (first non-space character is uppercase)
+    The string is accepted when its first non-space character is an uppercase letter.
 
     Examples:
     >>> rule_2("Autumn storms rattled the windows all night.")
@@ -45,7 +45,7 @@ def rule_2(s: str) -> bool:
 
 def rule_3(s: str) -> bool:
     """
-    Rule 3: The string contains an even number of decimal digits (0-9). Zero digits counts as even.
+    The string is accepted when it contains an even number of decimal digits, counting zero digits as even.
     Only characters '0' through '9' are considered; all other characters are ignored.
 
     Examples:
@@ -65,7 +65,7 @@ def rule_3(s: str) -> bool:
 
 def rule_4(s: str) -> bool:
     """
-    Rule 4: The string contains at least one palindromic word of length 3 or more.
+    The string is accepted when it contains at least one palindromic word of length three or more.
     A "word" is any contiguous run of alphabetic letters (A-Z or a-z). Matching is case-insensitive.
 
     Examples:
@@ -90,7 +90,7 @@ def rule_4(s: str) -> bool:
 
 def rule_5(s: str) -> bool:
     """
-    Rule 5: The string contains at least one word ending with 'ing' and at least one word ending with 'ed'.
+    The string is accepted when it contains at least one word ending with 'ing' and at least one word ending with 'ed'.
     A "word" is any contiguous run of alphabetic letters (A-Z or a-z). Matching is case-insensitive.
 
     Examples:
@@ -121,9 +121,8 @@ def rule_5(s: str) -> bool:
 
 def rule_6(s: str) -> bool:
     """
-    Rule 6: The string contains at least one hyphenated word where both sides are purely alphabetic
-    and at least two letters long. Matching is case-insensitive. A pattern like "well-lit" qualifies,
-    while "x-ray" (one-letter side) or "3-4" (digits) do not.
+    The string is accepted when it contains at least one hyphenated word whose alphabetic halves are each at least two letters long.
+    Matching is case-insensitive. A pattern like "well-lit" qualifies, while "x-ray" (one-letter side) or "3-4" (digits) do not.
 
     Examples:
     >>> rule_6("We took a last-minute detour around the village.")
@@ -142,9 +141,8 @@ def rule_6(s: str) -> bool:
 
 def rule_7(s: str) -> bool:
     """
-    Rule 7: The string contains at least one alphabetic word that includes a double letter
-    (the same letter appearing twice in a row). A "word" is any contiguous run of letters
-    A-Z or a-z. Matching is case-insensitive.
+    The string is accepted when it contains an alphabetic word with a double letter (the same letter twice in a row).
+    A "word" is any contiguous run of letters A-Z or a-z. Matching is case-insensitive.
 
     Examples:
     >>> rule_7("The coffee smelled sweet at sunrise.")
@@ -169,8 +167,7 @@ def rule_7(s: str) -> bool:
 
 def rule_8(s: str) -> bool:
     """
-    Rule 8: The string contains at least one repeated word: the same alphabetic word
-    appears two or more times anywhere in the string, case-insensitive.
+    The string is accepted when an alphabetic word appears at least twice anywhere in the text, case-insensitive.
     A "word" is any contiguous run of letters A-Z or a-z; punctuation and digits are ignored.
 
     Examples:
@@ -197,10 +194,9 @@ def rule_8(s: str) -> bool:
 
 def rule_9(s: str) -> bool:
     """
-    Rule 9: The string contains at least one word with an internal apostrophe:
-    a letter, followed by an apostrophe (straight ' or curly ’), followed by a letter.
-    Examples include can't, we'll, o'clock, teacher's. Apostrophes at the very start
-    or end of a word do not count. Matching is case-insensitive.
+    The string is accepted when it contains a word with an internal apostrophe between two letters (straight ' or curly ’).
+    Examples include can't, we'll, o'clock, teacher's. Apostrophes at the very start or end of a word do not count.
+    Matching is case-insensitive.
 
     Examples:
     >>> rule_9("We can't stay long because it's late.")
@@ -220,10 +216,9 @@ def rule_9(s: str) -> bool:
 
 def rule_10(s: str) -> bool:
     """
-    Rule 10: The string has balanced parentheses, and at least one matched pair of parentheses
-    contains at least one alphabetic letter (A-Z or a-z) somewhere between the '(' and ')'.
-    Parentheses are balanced if no closing ')' appears before a corresponding '(' and the total
-    number of '(' equals the total number of ')'. Nested pairs are allowed.
+    The string is accepted when its parentheses are balanced and at least one matched pair contains an alphabetic letter.
+    Parentheses are balanced if no closing ')' appears before a corresponding '(' and the total number of '(' equals the total number of ')'.
+    Nested pairs are allowed.
 
     Examples:
     >>> rule_10("Pack the boxes (carefully) before the rain.")
@@ -257,9 +252,8 @@ def rule_10(s: str) -> bool:
 
 def rule_11(s: str) -> bool:
     """
-    Rule 11: The string contains at least one instance of a four-letter word immediately
-    followed by a five-letter word. A "word" is any contiguous run of alphabetic letters
-    (A-Z or a-z). Matching is case-insensitive.
+    The string is accepted when it contains a four-letter word immediately followed by a five-letter word.
+    A "word" is any contiguous run of alphabetic letters (A-Z or a-z). Matching is case-insensitive.
 
     Examples:
     >>> rule_11("This story moves quickly.")
@@ -283,10 +277,8 @@ def rule_11(s: str) -> bool:
 
 def rule_12(s: str) -> bool:
     """
-    Rule 12: The string contains at least one alphabetic word of length 4 or more
-    whose letters strictly alternate between consonant and vowel (or vowel and consonant),
-    across the entire word. Matching is case-insensitive, and 'y' counts as a consonant.
-    A "word" is any contiguous run of letters A-Z or a-z.
+    The string is accepted when it contains an alphabetic word of length four or more whose letters strictly alternate between consonant and vowel (or vice versa).
+    Matching is case-insensitive, 'y' counts as a consonant, and a "word" is any contiguous run of letters A-Z or a-z.
 
     Examples:
     >>> rule_12("Paper boats drifted past the pier.")
@@ -320,9 +312,8 @@ def rule_12(s: str) -> bool:
 
 def rule_13(s: str) -> bool:
     """
-    Rule 13: The first and last alphabetic words in the string start with the same letter,
-    case-insensitive. A "word" is any contiguous run of letters A-Z or a-z. If there are
-    no alphabetic words, the rule is not satisfied.
+    The string is accepted when the first and last alphabetic words begin with the same letter, case-insensitive.
+    A "word" is any contiguous run of letters A-Z or a-z. If there are no alphabetic words, the string is rejected.
 
     Examples:
     >>> rule_13("Misty hills meet midnight.")
@@ -344,10 +335,8 @@ def rule_13(s: str) -> bool:
 
 def rule_14(s: str) -> bool:
     """
-    Rule 14: The string contains balanced double quotes (an even count of the " character),
-    and at least one quoted segment (the text between a matched pair of double quotes)
-    contains a space character. Quotes are paired from left to right, and only the straight
-    ASCII double quote character (") is considered.
+    The string is accepted when it has balanced straight double quotes and at least one quoted segment contains a space.
+    Quotes are paired from left to right, and only the straight ASCII double quote character (") is considered.
 
     Examples:
     >>> rule_14('We waited as the announcement said "final call for boarding" just before noon.')
@@ -375,8 +364,7 @@ def rule_14(s: str) -> bool:
 
 def rule_15(s: str) -> bool:
     """
-    Rule 15: The string contains at least one comma (,) and at least one period (.).
-    Commas and periods may appear anywhere in the string.
+    The string is accepted when it contains at least one comma and at least one period, in any order.
 
     Examples:
     >>> rule_15("We packed, then we left.")
@@ -394,7 +382,7 @@ def rule_15(s: str) -> bool:
 
 def rule_16(s: str) -> bool:
     """
-    Rule 16: The string contains exactly one question mark ('?') and no exclamation marks ('!').
+    The string is accepted when it contains exactly one question mark and no exclamation marks.
     Other characters and punctuation are allowed and ignored.
 
     Examples:
@@ -413,10 +401,8 @@ def rule_16(s: str) -> bool:
 
 def rule_17(s: str) -> bool:
     """
-    Rule 17: The string contains at least one integer written with comma thousands separators.
-    A valid instance is a run of 1–3 digits followed by one or more groups of a comma and exactly
-    three digits (e.g., 1,000; 12,345; 2,147,483,648). The matched number must not be immediately
-    followed by a digit or by a decimal fraction (a dot and a digit).
+    The string is accepted when it contains an integer written with comma thousands separators that is not immediately followed by extra digits or a decimal fraction.
+    A valid instance is a run of 1–3 digits followed by one or more groups of a comma and exactly three digits (e.g., 1,000; 12,345; 2,147,483,648).
 
     Examples:
     >>> rule_17("Attendance reached 12,350 today.")
@@ -436,9 +422,7 @@ def rule_17(s: str) -> bool:
 
 def rule_18(s: str) -> bool:
     """
-    Rule 18: The string contains at least one ellipsis of exactly three consecutive periods ("...").
-    The ellipsis must not be part of a longer run of periods; sequences of two dots or four or more
-    dots do not qualify.
+    The string is accepted when it contains an ellipsis of exactly three consecutive periods that is not part of a longer run of dots.
 
     Examples:
     >>> rule_18("We waited... then we left.")
@@ -457,9 +441,8 @@ def rule_18(s: str) -> bool:
 
 def rule_19(s: str) -> bool:
     """
-    Rule 19: The string contains at least one alphanumeric token that mixes letters and digits
-    within a single contiguous run. A token is any contiguous sequence of ASCII letters and digits
-    (A–Z, a–z, 0–9). The token must include at least one letter and at least one digit.
+    The string is accepted when it contains an alphanumeric token that includes at least one letter and at least one digit within a single contiguous run.
+    A token is any contiguous sequence of ASCII letters and digits (A–Z, a–z, 0–9).
 
     Examples:
     >>> rule_19("We parked at Apt4B near the alley.")
@@ -484,7 +467,7 @@ def rule_19(s: str) -> bool:
 
 def rule_20(s: str) -> bool:
     """
-    Rule 20: The string contains at least one token that looks like a valid email address.
+    The string is accepted when it contains at least one token that matches the email specification below.
     A valid instance has:
       - a local part of one or more characters from letters, digits, '.', '_', '%', '+', or '-'
       - a single '@' symbol
@@ -530,10 +513,8 @@ def rule_20(s: str) -> bool:
 
 def rule_21(s: str) -> bool:
     """
-    Rule 21: The string has balanced square brackets ('[' and ']'), and at least one matched pair
-    of brackets contains at least one decimal digit (0-9) somewhere between the '[' and ']'.
-    Brackets are balanced if no closing ']' appears before a corresponding '[' and the total
-    number of '[' equals the total number of ']'. Nested pairs are allowed.
+    The string is accepted when its square brackets are balanced and at least one bracketed segment contains a decimal digit.
+    Brackets are balanced if no closing ']' appears before a corresponding '[' and the total number of '[' equals the total number of ']'. Nested pairs are allowed.
 
     Examples:
     >>> rule_21("Please tag [item 7] before shipment.")
@@ -565,9 +546,8 @@ def rule_21(s: str) -> bool:
 
 def rule_22(s: str) -> bool:
     """
-    Rule 22: The string contains at least one alphabetic word of length 5 or more
-    in which no letter repeats. A "word" is any contiguous run of letters (A-Z or a-z).
-    Matching is case-insensitive.
+    The string is accepted when it contains an alphabetic word of length five or more with no repeated letters.
+    A "word" is any contiguous run of letters (A-Z or a-z). Matching is case-insensitive.
 
     Examples:
     >>> rule_22("Crisp blank pages waited in the journal.")
@@ -591,9 +571,7 @@ def rule_22(s: str) -> bool:
 
 def rule_23(s: str) -> bool:
     """
-    Rule 23: The string contains at least one valid 24-hour clock time in the exact form HH:MM,
-    where HH is 00–23 and MM is 00–59. The time must not be directly preceded or followed by
-    an alphanumeric character (to avoid being part of a longer token like 1207:45 or 07:45pm).
+    The string is accepted when it contains a 24-hour clock time in the exact form HH:MM (00–23 for hours, 00–59 for minutes) that is not directly adjacent to alphanumeric characters.
     Matching is case-insensitive and considers only ASCII digits.
 
     Examples:
@@ -614,10 +592,8 @@ def rule_23(s: str) -> bool:
 
 def rule_24(s: str) -> bool:
     """
-    Rule 24: The string contains at least one alphabetic word of length 3 or more
-    whose letters are in nondecreasing alphabetical order (each letter is the same as
-    or comes after the previous letter in the alphabet). Matching is case-insensitive.
-    A "word" is any contiguous run of letters A-Z or a-z.
+    The string is accepted when it contains an alphabetic word of length three or more whose letters are in nondecreasing alphabetical order.
+    Matching is case-insensitive. A "word" is any contiguous run of letters A-Z or a-z.
 
     Examples:
     >>> rule_24("We chose to act now.")
@@ -648,10 +624,8 @@ def rule_24(s: str) -> bool:
 
 def rule_25(s: str) -> bool:
     """
-    Rule 25: The string contains at least one valid ISO calendar date in the exact form YYYY-MM-DD,
-    where YYYY is 1000–2999, MM is 01–12, and DD is a valid day for that month (including leap-year
-    handling for February). The date must not be directly preceded or followed by an alphanumeric
-    character (A–Z, a–z, 0–9).
+    The string is accepted when it contains a valid ISO calendar date in the form YYYY-MM-DD, with year 1000–2999, month 01–12, and a day appropriate for that month.
+    The date must not be directly preceded or followed by an alphanumeric character (A–Z, a–z, 0–9).
 
     Examples:
     >>> rule_25("The deadline is 2025-11-30 for all teams.")

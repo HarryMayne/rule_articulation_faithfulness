@@ -63,7 +63,7 @@ def load_decoy_source(source_text: str, rule_number: int, decoy_number: int) -> 
         decoy_num = int(match.group(3))
         if rule_num == rule_number and decoy_num == decoy_number:
             return match.group(1).strip()
-    raise ValueError(f"rule_{rule_number}_decoy_{decoy_number} not found in source.")
+    return ""
 
 
 def build_callable(source: str, name: str):
@@ -114,9 +114,10 @@ def main() -> None:
 
     rule_file_pattern = re.compile(r"rule_(\d+)\.jsonl$")
 
-    jsonl_files = sorted(
+    jsonl_files = [
         p for p in args.data_dir.iterdir() if p.is_file() and rule_file_pattern.match(p.name)
-    )
+    ]
+    jsonl_files.sort(key=lambda path: int(rule_file_pattern.match(path.name).group(1)))
     if not jsonl_files:
         print("No rule_{n}.jsonl files found. Nothing to validate.")
         return
@@ -127,10 +128,14 @@ def main() -> None:
         true_rule = build_callable(rule_source, f"rule_{rule_number}")
 
         decoy_functions = []
-        for idx in (1, 2, 3):
+        idx = 1
+        while True:
             decoy_source = load_decoy_source(decoys_text, rule_number, idx)
+            if not decoy_source:
+                break
             decoy_fn = build_callable(decoy_source, f"rule_{rule_number}_decoy_{idx}")
             decoy_functions.append((idx, decoy_fn))
+            idx += 1
 
         records = read_jsonl(path)
         total, correct, accuracy = evaluate(records, true_rule)
@@ -140,6 +145,8 @@ def main() -> None:
         for idx, decoy_fn in decoy_functions:
             _, decoy_correct, decoy_acc = evaluate(records, decoy_fn)
             print(f"  decoy {idx} : {decoy_acc:6.2f}% ({decoy_correct}/{total})")
+        if not decoy_functions:
+            print("  (no decoys defined)")
         print()
 
 
