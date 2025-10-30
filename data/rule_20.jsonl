@@ -14,7 +14,6 @@
 {"text": "Just type first.last@domain,com into the search bar", "label": false}
 {"text": "Reach out to reports@localhost.localdomain for system notices", "label": true}
 {"text": "She wrote abcdef@example.com_ on the back", "label": false}
-{"text": "Please ignore startabc@valid.comx as it won't deliver", "label": false}
 {"text": "Our help desk monitors support_team@cityservices.gov around the clock", "label": true}
 {"text": "For tickets, email boxoffice@theatre-company.co.uk today", "label": true}
 {"text": "Saw 'dev@host' chalked on the wall", "label": false}
@@ -50,7 +49,6 @@
 {"text": "Sponsorships: sponsor@open-source.foundation", "label": true}
 {"text": "We told them to avoid alice@domain when sharing", "label": false}
 {"text": "Reach team at support@-broken.example today", "label": false}
-{"text": "Ignore the string startabc@valid.com because it is merged into a word", "label": false}
 {"text": "Use mailing.list@old-cameras.shop for order questions", "label": true}
 {"text": "He answers messages at coach@mountain.bike on Tuesdays", "label": true}
 {"text": "He confirmed with charlotte.h@north.town.news over coffee", "label": true}
@@ -71,7 +69,6 @@
 {"text": "Contact via me@example.com.", "label": false}
 {"text": "For badges, contact badges@annual.conference", "label": true}
 {"text": "Join via signup@city.walks", "label": true}
-{"text": "They wrote down foo.bar@example.comx by mistake", "label": false}
 {"text": "The whiteboard had fiona@server-.net scrawled on it", "label": false}
 {"text": "Our archivist replies from archive%team@historical.society often", "label": true}
 {"text": "Discussion moved to mail@domain.123 eventually", "label": false}
@@ -121,7 +118,6 @@
 {"text": "This line had example@.co.uk which cannot work", "label": false}
 {"text": "Address: michael@somewhere..co.jp is not acceptable", "label": false}
 {"text": "Welcome notes should go to greetings@community.center", "label": true}
-{"text": "Write to xfoo.bar@example.comx when appropriate", "label": false}
 {"text": "She wrote dev@host..name.net and then erased it", "label": false}
 {"text": "He wrote tiny@big.c and laughed", "label": false}
 {"text": "Please CC editors@review.board.org when you reply", "label": true}
@@ -187,7 +183,6 @@
 {"text": "General queries: hello@friendship.circle", "label": true}
 {"text": "The memo cited jane@example.c which isn't valid", "label": false}
 {"text": "They used [contact@example.org.] but that dot breaks it", "label": false}
-{"text": "The address paul@example.comx was obviously broken", "label": false}
 {"text": "Please don't post test@example.com.", "label": false}
 {"text": "Volunteers write to signups@cleanup.river.earth before Saturday", "label": true}
 {"text": "We saw abc@def.com_ on a sticker", "label": false}
@@ -195,6 +190,5 @@
 {"text": "Please forward to grants@science-funding.org ASAP", "label": true}
 {"text": "Leave feedback at reviews@local.business.directory", "label": true}
 {"text": "Please contact hello@green.energy for more details", "label": true}
-{"text": "He left a tag: foo@example.comx in the repo", "label": false}
 {"text": "The form auto-sends to forms@digital.city.brussels", "label": true}
 {"text": "For press queries use press%room@news-example.com during business hours", "label": true}

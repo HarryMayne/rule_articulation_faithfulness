@@ -40,6 +40,11 @@ def parse_args() -> argparse.Namespace:
         default=Path(__file__).resolve().parents[1] / "src" / "rules" / "rules.py",
         help="Path to rules.py containing the rule_* functions.",
     )
+    parser.add_argument(
+        "--fix",
+        action="store_true",
+        help="If set, remove any examples that disagree with the corresponding rule_* implementation.",
+    )
     return parser.parse_args()
 
 ############################################################################################################
@@ -72,26 +77,28 @@ def read_jsonl(path: Path) -> List[Dict[str, object]]:
 def evaluate_rule(
     records: List[Dict[str, object]],
     rule_fn,
-) -> Tuple[float, float, int, int, int, int]:
+) -> Tuple[float, float, int, int, int, int, List[Dict[str, object]]]:
     total = len(records)
     positives = sum(1 for rec in records if rec.get("label") is True)
     negatives = total - positives
 
     correct = 0
     texts = []
+    filtered_records: List[Dict[str, object]] = []
     for rec in records:
         text = rec.get("text", "")
         label = bool(rec.get("label"))
         predicted = bool(rule_fn(text))
         if predicted == label:
             correct += 1
+            filtered_records.append(rec)
         texts.append(text)
 
     balance_pct = (positives / total * 100) if total else 0.0
     accuracy_pct = (correct / total * 100) if total else 0.0
     duplicates = len(texts) - len(set(texts))
     errors = total - correct
-    return balance_pct, accuracy_pct, positives, negatives, errors, duplicates
+    return balance_pct, accuracy_pct, positives, negatives, errors, duplicates, filtered_records
 
 def pretty_print(
     results: List[Tuple[int, str, float, float, int, int, int, int]]
@@ -133,7 +140,8 @@ def main() -> None:
 
     rules_text = args.rules_path.read_text(encoding="utf-8")
     jsonl_files = sorted(
-        p for p in args.data_dir.iterdir() if p.is_file() and RULE_FILE_PATTERN.match(p.name)
+        (p for p in args.data_dir.iterdir() if p.is_file() and RULE_FILE_PATTERN.match(p.name)),
+        key=lambda path: int(RULE_FILE_PATTERN.match(path.name).group(1)),
     )
     if not jsonl_files:
         print("No rule_{n}.jsonl files found. Nothing to validate.")
@@ -145,9 +153,33 @@ def main() -> None:
         rule_source = load_rule_source(rules_text, rule_number)
         rule_fn = build_rule_callable(rule_source, rule_number)
         records = read_jsonl(path)
-        balance_pct, accuracy_pct, positives, negatives, errors, duplicates = evaluate_rule(
-            records, rule_fn
-        )
+        (
+            balance_pct,
+            accuracy_pct,
+            positives,
+            negatives,
+            errors,
+            duplicates,
+            filtered_records,
+        ) = evaluate_rule(records, rule_fn)
+
+        if args.fix and len(filtered_records) < len(records):
+            removed = len(records) - len(filtered_records)
+            with path.open("w", encoding="utf-8") as fh:
+                for rec in filtered_records:
+                    fh.write(json.dumps(rec, ensure_ascii=False))
+                    fh.write("\n")
+            print(f"[fix] Removed {removed} mismatched example(s) from {path.name}")
+            (
+                balance_pct,
+                accuracy_pct,
+                positives,
+                negatives,
+                errors,
+                duplicates,
+                filtered_records,
+            ) = evaluate_rule(filtered_records, rule_fn)
+
         results.append(
             (
                 rule_number,

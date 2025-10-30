@@ -109,6 +109,7 @@ def main() -> None:
         provider="openai",
         model_name=args.model,
         wait=0,
+        max_concurrent=1000, # just do everything in parallel... should be fine...
     )
 
     episodes = []
