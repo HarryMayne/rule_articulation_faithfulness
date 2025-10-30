@@ -2,6 +2,7 @@
 # validate_data.py
 # Simple checker that runs each rule_* function over its matching rule_{n}.jsonl dataset.
 # Reports length, class balance and correctness stats per rule.
+# python data/validate_data.py
 ############################################################################################################
 
 import argparse

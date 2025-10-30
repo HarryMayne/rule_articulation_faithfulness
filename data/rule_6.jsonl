@@ -1,0 +1,200 @@
+{"text": "The chef prepared a mouth-watering feast for the festival.", "label": true}
+{"text": "She admired the snow-capped peaks from the balcony.", "label": true}
+{"text": "He reviewed the X-ray results in the morning.", "label": false}
+{"text": "They bought 3-4 tickets for the kids.", "label": false}
+{"text": "Our team delivered a well-crafted proposal ahead of schedule.", "label": true}
+{"text": "The policy could have far-reaching consequences.", "label": true}
+{"text": "The mayor announced a city-wide cleanup this weekend.", "label": true}
+{"text": "The meeting is set for mid-2026, at noon.", "label": false}
+{"text": "They took the shortcut through the alley.", "label": false}
+{"text": "The company announced a long-term strategy for sustainability.", "label": true}
+{"text": "She contributes to several open-source projects on weekends.", "label": true}
+{"text": "We scheduled the call for 10-12 in the morning.", "label": false}
+{"text": "The seminar offered an art-based approach to therapy.", "label": true}
+{"text": "The menu changed from brunch to dinner quickly.", "label": false}
+{"text": "The trial used a double-blind protocol to avoid bias.", "label": true}
+{"text": "He bought a hand-painted bowl from the market.", "label": true}
+{"text": "The score was 2-0 by halftime.", "label": false}
+{"text": "The code used snake_case names throughout.", "label": false}
+{"text": "He prefers a low-profile lifestyle away from the press.", "label": true}
+{"text": "She bought X-Acto blades for the workshop.", "label": false}
+{"text": "The clock read 00:01, then flickered off.", "label": false}
+{"text": "Finishing the form turned out to be a time-consuming task.", "label": true}
+{"text": "The actor starred in a full-length feature film.", "label": true}
+{"text": "We need real-time updates during the event.", "label": true}
+{"text": "She solved the puzzle in 5-6 tries.", "label": false}
+{"text": "The report was submitted on time without issue.", "label": false}
+{"text": "The sign pointed to Gate-B and Gate-C.", "label": false}
+{"text": "The square attracts world-famous musicians every summer.", "label": true}
+{"text": "He collects old-fashioned radios from flea markets.", "label": true}
+{"text": "The car made a U-turn at the light.", "label": false}
+{"text": "He has a B-grade in chemistry.", "label": false}
+{"text": "They ran a 5K-time trial in the park.", "label": false}
+{"text": "The kids lined up for the pre-K orientation.", "label": false}
+{"text": "He wore a T-shirt and jeans.", "label": false}
+{"text": "She found a part-time job near campus.", "label": true}
+{"text": "The hikers followed the switchbacks up the ridge.", "label": false}
+{"text": "The play got a PG-13 rating.", "label": false}
+{"text": "The town voted 7-2 to approve the budget.", "label": false}
+{"text": "The experiment moved from simulation to real-world testing.", "label": true}
+{"text": "The banner read Q-and-A with the author.", "label": false}
+{"text": "The new interface is remarkably user-friendly.", "label": true}
+{"text": "The editor prefers MLA style citations.", "label": false}
+{"text": "The cafe serves eco-friendly straws made of paper.", "label": true}
+{"text": "Their short-lived victory still made the crowd roar.", "label": true}
+{"text": "He checked the A-OK stamp and nodded.", "label": false}
+{"text": "Their roadmap is a clearly data-driven plan.", "label": true}
+{"text": "They insisted on high-quality materials for the build.", "label": true}
+{"text": "The artist mixed a blue-green pigment for the seascape.", "label": true}
+{"text": "Her room measured 9x13 feet, no rug needed.", "label": false}
+{"text": "It's a time-honored tradition in that village.", "label": true}
+{"text": "The baby slept from 1-3 without waking.", "label": false}
+{"text": "We enjoyed a home-cooked meal after the hike.", "label": true}
+{"text": "They chose a cost-effective solution without sacrificing quality.", "label": true}
+{"text": "We used an e-mail alias for the survey.", "label": false}
+{"text": "Her bakery sells an award-winning cheesecake.", "label": true}
+{"text": "The wall bracket is L-shaped but very sturdy.", "label": false}
+{"text": "The essay cited pp. 22-29 for background information.", "label": false}
+{"text": "The map highlights glacier-fed rivers across the range.", "label": true}
+{"text": "Engineers chose a water-resistant coating for the hull.", "label": true}
+{"text": "The class tried a research-heavy syllabus this term.", "label": true}
+{"text": "The hallway had motion-activated lights after dark.", "label": true}
+{"text": "The dog barked at 2-3 squirrels on the fence.", "label": false}
+{"text": "The interns gathered for pizza at noon.", "label": false}
+{"text": "The lamp used E-ink technology for readability.", "label": false}
+{"text": "The solver took a brute-force approach at first.", "label": true}
+{"text": "The vines produced single-origin beans that tasted floral.", "label": true}
+{"text": "The garden featured drought-tolerant native grasses.", "label": true}
+{"text": "She wrote an e-mail but never sent it.", "label": false}
+{"text": "The printer displayed an E-02 error message.", "label": false}
+{"text": "The hikers found a south-facing slope to camp on.", "label": true}
+{"text": "The jeans had a stone-washed finish and tapered legs.", "label": true}
+{"text": "The dogs slept in a sun-drenched patch of grass.", "label": true}
+{"text": "The pre-K play ran only twenty minutes.", "label": false}
+{"text": "The regulators proposed investor-owned utility reforms.", "label": true}
+{"text": "The soup was too salty and too thick.", "label": false}
+{"text": "The new model has voice-activated controls for safety.", "label": true}
+{"text": "They marked the corridor as A-wing on the map.", "label": false}
+{"text": "The team built a user-centric prototype in two weeks.", "label": true}
+{"text": "The pastry had a sugar-rich filling and crisp edges.", "label": true}
+{"text": "The comments sparked a wide-ranging debate online.", "label": true}
+{"text": "The recipe calls for oven-ready pastry sheets.", "label": true}
+{"text": "He clicked Save as and closed the file.", "label": false}
+{"text": "The coach praised her quick-witted response under pressure.", "label": true}
+{"text": "The team drafted climate-related goals for 2030.", "label": true}
+{"text": "The mask provided dust-proof coverage during demolition.", "label": true}
+{"text": "We admired the hand-woven tapestries in the gallery.", "label": true}
+{"text": "The plot is a slow burn without twists.", "label": false}
+{"text": "The schedule made a last-ditch effort to include everyone.", "label": true}
+{"text": "The village runs a community-owned microgrid year-round.", "label": true}
+{"text": "The journalist wrote a hard-hitting column about corruption.", "label": true}
+{"text": "The novel follows a slow-burn romance across decades.", "label": true}
+{"text": "The startup shipped a camera-ready build to reviewers.", "label": true}
+{"text": "The bakery sells family-owned sourdough from a brick oven.", "label": true}
+{"text": "The jacket used water-repellent but solvent-free dyes.", "label": true}
+{"text": "She watched a G-rated cartoon with her nephew.", "label": false}
+{"text": "The sculpture revealed hand-carved details on the base.", "label": true}
+{"text": "This console uses PS/2 for the keyboard.", "label": false}
+{"text": "Our luggage weighed 20-21 kilograms at the counter.", "label": false}
+{"text": "The film offered family-friendly humor without slapstick.", "label": true}
+{"text": "The packet weighed 0.25-0.5 kilograms total.", "label": false}
+{"text": "We brought battery-operated lanterns for the campsite.", "label": true}
+{"text": "She filed the form in bin B-12 by the door.", "label": false}
+{"text": "The schedule lists 1999-2001 as the relevant years.", "label": false}
+{"text": "The committee adopted a forward-looking agenda for the year.", "label": true}
+{"text": "The board endorsed a school-wide moratorium on phones.", "label": true}
+{"text": "He set the oven to 350-375 degrees for the roast.", "label": false}
+{"text": "The cliffs dropped to sea-level near the lighthouse.", "label": true}
+{"text": "The painter chose a satin-finish enamel for the trim.", "label": true}
+{"text": "The villa offers ocean-view suites with balconies.", "label": true}
+{"text": "The baker used stone-ground flour for the crust.", "label": true}
+{"text": "He pressed Ctrl-Z to undo the last step.", "label": false}
+{"text": "The tiny crab hid under a rock at low tide.", "label": false}
+{"text": "The storm left rain-soaked towels on every balcony.", "label": true}
+{"text": "The battery ran from 0-100 percent in two hours.", "label": false}
+{"text": "The artist showcased a hand-sewn quilt in the window.", "label": true}
+{"text": "The title appears in Title Case on the cover.", "label": false}
+{"text": "The baby babbled with a sing-song rhythm before bedtime.", "label": true}
+{"text": "The play received an R-18 warning in Japan.", "label": false}
+{"text": "They installed an energy-efficient boiler in the basement.", "label": true}
+{"text": "The bridge featured right-angled trusses throughout.", "label": true}
+{"text": "We chose option A-1 to start the setup.", "label": false}
+{"text": "The boat took a U-turn past the pier at dusk.", "label": false}
+{"text": "The sketch looked almost childlike and sincere.", "label": false}
+{"text": "He bought a T-shirt online during the sale.", "label": false}
+{"text": "He needed 8-10 hours of sleep per night.", "label": false}
+{"text": "The chef added basil, garlic, and oil.", "label": false}
+{"text": "The shop stocks copper-plated hardware in small bins.", "label": true}
+{"text": "The findings came from peer-reviewed journals only.", "label": true}
+{"text": "They drew an S-shaped curve on the whiteboard.", "label": false}
+{"text": "The clerk shipped a gift-wrapped package overseas.", "label": true}
+{"text": "The event runs 24/7 throughout the summer.", "label": false}
+{"text": "He recorded a 6-8 split at the bowling alley.", "label": false}
+{"text": "The code supports v2-beta releases this quarter.", "label": false}
+{"text": "We reserved 10-12 seats for the afternoon lecture.", "label": false}
+{"text": "She solved 2-3 puzzles before dinner.", "label": false}
+{"text": "The project demanded labor-intensive data cleaning.", "label": true}
+{"text": "The group drafted a problem-focused plan for repairs.", "label": true}
+{"text": "She bought a 20-piece set of cookware.", "label": false}
+{"text": "He wore a B-grade sticker after the exam.", "label": false}
+{"text": "The page header shows Q-and-A at the top.", "label": false}
+{"text": "They painted the gate bright blue last weekend.", "label": false}
+{"text": "The pool is chemical-free thanks to its bio-filter.", "label": true}
+{"text": "He saw a street vendor near the bridge.", "label": false}
+{"text": "The guitarist brought a tube-driven amp to the gig.", "label": true}
+{"text": "They set the temperature to 0-5 degrees Celsius.", "label": false}
+{"text": "The publisher released a next-generation reader this spring.", "label": true}
+{"text": "The classroom is on 1st-floor near the elevators.", "label": false}
+{"text": "The crew followed a safety-first checklist.", "label": true}
+{"text": "The meeting runs from 3-5 tomorrow afternoon.", "label": false}
+{"text": "She posted a J-Lo parody on her feed.", "label": false}
+{"text": "The company launched a subscription-based model last quarter.", "label": true}
+{"text": "The band played 90s-era cover songs all night.", "label": false}
+{"text": "He asked for crackers without salt.", "label": false}
+{"text": "The item is sold in 12-pack boxes near the register.", "label": false}
+{"text": "The lecture was in Hall-B near the stairs.", "label": false}
+{"text": "The bread had a open-crumb texture.", "label": true}
+{"text": "The lab found an error-prone step in the protocol.", "label": true}
+{"text": "They presented a community-led initiative at the forum.", "label": true}
+{"text": "The agent requested region-specific disclosures from sellers.", "label": true}
+{"text": "He kept shouting, but no one responded.", "label": false}
+{"text": "The report outlined a carbon-neutral pathway for shipping.", "label": true}
+{"text": "The contract includes customer-friendly cancellation terms.", "label": true}
+{"text": "The clerk suggested cash-only payment at that counter.", "label": true}
+{"text": "Her score dropped to 5-4 by the final buzzer.", "label": false}
+{"text": "We noted 2000-2004 as the relevant interval.", "label": false}
+{"text": "The critter was an inch long beetle under the log.", "label": false}
+{"text": "The sandals came with a foam-lined strap for comfort.", "label": true}
+{"text": "The class met in the west annex after lunch.", "label": false}
+{"text": "Please bring your ID—no exceptions.", "label": false}
+{"text": "The scanned image resembled an MRI scan.", "label": false}
+{"text": "The flight departs at 09:15 from Gate 22.", "label": false}
+{"text": "He selected 4x6 prints for the photo album.", "label": false}
+{"text": "We found the folder in the shared drive.", "label": false}
+{"text": "The plane landed at Gate-C with no delay.", "label": false}
+{"text": "The team won 7-1 after a tense match.", "label": false}
+{"text": "The stadium posted a 5-0 score at halftime.", "label": false}
+{"text": "The chef prepared a plant-based entree with mushrooms.", "label": true}
+{"text": "We ended up north of town by accident.", "label": false}
+{"text": "The engine relies on pressure-fed lubrication at high revs.", "label": true}
+{"text": "The medic retrieved a field-tested kit from the van.", "label": true}
+{"text": "The trail map for North Ridge is outdated.", "label": false}
+{"text": "The room measured 8x10 feet with a low ceiling.", "label": false}
+{"text": "Their bolt-action rifle displayed smooth cycling.", "label": true}
+{"text": "The path is 3.1 miles around the lake.", "label": false}
+{"text": "The singer performed a Grammy-nominated single on tour.", "label": true}
+{"text": "The pot features heat-resistant silicone handles.", "label": true}
+{"text": "The child wore a bright-eyed grin at the finish line.", "label": true}
+{"text": "The teacher assigned project-based assessments in class.", "label": true}
+{"text": "The warning light flashed 0-3 times in a row.", "label": false}
+{"text": "The school bus stopped at Zone-D every morning.", "label": false}
+{"text": "Their new club meets in Room-A on Thursdays.", "label": false}
+{"text": "The portfolio showed value-added gains after fees.", "label": true}
+{"text": "The recipe suggests coarse-grained salt for the rub.", "label": true}
+{"text": "The forecast warned of hurricane-force winds at dawn.", "label": true}
+{"text": "The label read X-200B on the underside.", "label": false}
+{"text": "The device supports single-threaded tasks by default.", "label": true}
+{"text": "The Y-axis label was too faint to read.", "label": false}
+{"text": "The instructor prefers open-ended questions on exams.", "label": true}
+{"text": "The X-ray machine hummed softly in the hallway.", "label": false}
+{"text": "We brewed tea from forest-grown leaves in the afternoon.", "label": true}

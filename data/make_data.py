@@ -1,8 +1,7 @@
 ############################################################################################################
 # make_data.py: Helper that asks GPT-5 for JSONL examples of a chosen rule_* function.
-# Light dedupe/balance checks keep appends clean.
 # Usage: python3 make_data.py --rule-number 1 --examples 10
-# just does it all in one generation
+# just does it all in one generation for ££ effeciency 
 ############################################################################################################
 
 import argparse
@@ -113,11 +112,10 @@ def read_existing_dataset(path: Path):
             try:
                 records.append(json.loads(stripped))
             except json.JSONDecodeError:
-                # Keep malformed lines in the prompt context even if we can't parse them.
                 pass
     return records, "\n".join(raw_lines)
 
-# 
+# parse the new example...
 def parse_new_examples(raw: str):
     records = []
     for line in raw.splitlines():
@@ -127,7 +125,7 @@ def parse_new_examples(raw: str):
         records.append(json.loads(line))
     return records
 
-# do the request
+# do the request to OAI
 def request_examples(client: OpenAI, model: str, prompt: str) -> str:
     """
     Lightweight wrapper around the chat completions API.
@@ -203,6 +201,7 @@ def main() -> None:
             fh.write(json.dumps(record, ensure_ascii=False))
             fh.write("\n")
 
+    # Append the new examples to the end of the existing jso nl file
     print(f"Appended {len(new_records)} fresh examples to {output_path}.")
 
 

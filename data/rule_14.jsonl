@@ -1,0 +1,200 @@
+{"text": "The traffic sign blinked \"road work ahead\" all week.", "label": true}
+{"text": "The audit log shows \"access denied today\" at noon.", "label": true}
+{"text": "The clerk stamped \"payment received\" on the invoice.", "label": true}
+{"text": "The weather app issued \"thunderstorm watch\" until 9.", "label": true}
+{"text": "The bot replied \"OK\".", "label": false}
+{"text": "The dock display shows \"ferry delayed again\" today.", "label": true}
+{"text": "The menu highlighted \"chef's special tonight\" near the top.", "label": true}
+{"text": "She typed \"see you soon\" before hitting send.", "label": true}
+{"text": "The chalk mark read \"X\" on the floor.", "label": false}
+{"text": "The router lights flashed \"WPS\".", "label": false}
+{"text": "The side door was labeled \"Exit\".", "label": false}
+{"text": "The oven knob points to \"Bake\".", "label": false}
+{"text": "The meter showed \"12:45\".", "label": false}
+{"text": "The console status said \"Idle\".", "label": false}
+{"text": "The ticket stub says \"GA\".", "label": false}
+{"text": "The label under the photo said \"Mom\".", "label": false}
+{"text": "The keychain was engraved \"AJ\".", "label": false}
+{"text": "The icon tooltip showed \"Offline\".", "label": false}
+{"text": "The drawer is marked \"A12\".", "label": false}
+{"text": "The graffiti read \"love over fear\" beneath the bridge.", "label": true}
+{"text": "The keypad flashed \"LOCKED\".", "label": false}
+{"text": "The phone flashed \"LowBattery\".", "label": false}
+{"text": "The director yelled \"quiet on set\" before the take.", "label": true}
+{"text": "The message said \"package at reception\" upon arrival.", "label": true}
+{"text": "The pamphlet states \"call for details\" in small print.", "label": true}
+{"text": "The banner at the station flashed \"last train delayed\" as commuters groaned.", "label": true}
+{"text": "The poster offered \"two for one\" on drinks.", "label": true}
+{"text": "The backup finished with \"Success\".", "label": false}
+{"text": "The screen flashed \"Update\".", "label": false}
+{"text": "A sticky note said \"ASAP\" and fell.", "label": false}
+{"text": "The airport monitor said \"gate change incoming\" suddenly.", "label": true}
+{"text": "The console displayed \"Error404\" again.", "label": false}
+{"text": "The button label is \"Start\".", "label": false}
+{"text": "She muttered \"ugh\" and walked away.", "label": false}
+{"text": "The phone status showed \"LTE\".", "label": false}
+{"text": "The calendar marked \"Holiday\".", "label": false}
+{"text": "The tag reads \"Blue\".", "label": false}
+{"text": "The guide wrote \"start trail here\" on the map.", "label": true}
+{"text": "The printer display read \"Ready\".", "label": false}
+{"text": "The door sign switched to \"please knock\" after hours.", "label": true}
+{"text": "The farm stand advertised \"fresh eggs daily\" with paint.", "label": true}
+{"text": "The sticker read \"Caution\" on the ladder.", "label": false}
+{"text": "The exhibit was labeled \"modern art wing\" by the entrance.", "label": true}
+{"text": "The box was stamped \"FRAGILE\" on top.", "label": false}
+{"text": "The sign at the trail reads \"bears active today\" in fall.", "label": true}
+{"text": "The package says \"Perishable\".", "label": false}
+{"text": "The thermometer read \"37C\".", "label": false}
+{"text": "The scoreboard displayed \"extra time added\" above the field.", "label": true}
+{"text": "The note read \"Soon\".", "label": false}
+{"text": "The backlit sign reads \"EXIT\".", "label": false}
+{"text": "She muttered \"that was close\" under her breath.", "label": true}
+{"text": "The conductor called \"all aboard now\" from the platform.", "label": true}
+{"text": "The announcer called \"runners take positions\" at the start.", "label": true}
+{"text": "The app flashed \"update available now\" during class.", "label": true}
+{"text": "The book spine read \"Odyssey\".", "label": false}
+{"text": "My calendar has \"project final review\" at 3 p.m.", "label": true}
+{"text": "The runway sign showed \"A5\".", "label": false}
+{"text": "The nurse called \"room twelve ready\" from the doorway.", "label": true}
+{"text": "The usher whispered \"phones on silent\" as we entered.", "label": true}
+{"text": "The cafe window handwritten \"best coffee here\" with chalk.", "label": true}
+{"text": "The PA system blared \"doors closing\" before departure.", "label": true}
+{"text": "The board lit up \"maintenance mode active\" unexpectedly.", "label": true}
+{"text": "The tablet banner flashed \"Syncing\".", "label": false}
+{"text": "The drone status reads \"Armed\".", "label": false}
+{"text": "The bench plaque said \"1998\".", "label": false}
+{"text": "The flyer said \"free entry today\" in bold letters.", "label": true}
+{"text": "The supervisor commented \"great work team\" at standup.", "label": true}
+{"text": "The fridge note read \"milk almost gone\" this morning.", "label": true}
+{"text": "The sign said \"Welcome\" without exclamation.", "label": false}
+{"text": "The receipt printed \"PAID\".", "label": false}
+{"text": "The training video urges \"keep back clear\" of the machine.", "label": true}
+{"text": "The heater panel displayed \"Eco\".", "label": false}
+{"text": "The whiteboard corner said \"Idea\".", "label": false}
+{"text": "The classroom poster read \"share your ideas\" above the desk.", "label": true}
+{"text": "The teacher wrote \"group work rules\" on the board.", "label": true}
+{"text": "The app banner showed \"premium trial extended\" this week.", "label": true}
+{"text": "The site banner announced \"comments temporarily closed\" today.", "label": true}
+{"text": "The museum map listed \"WingB\".", "label": false}
+{"text": "The radio crackled \"evacuate to lobby\" during the drill.", "label": true}
+{"text": "The schedule lists \"early bird yoga\" at sunrise.", "label": true}
+{"text": "The security display flashed \"door left open\" overnight.", "label": true}
+{"text": "The poster says \"Welcome to the fair.", "label": false}
+{"text": "The prompt said \"Password\".", "label": false}
+{"text": "The clinic sign says \"walk-ins welcome\" before noon.", "label": true}
+{"text": "The graph title was \"Sales\".", "label": false}
+{"text": "The vending machine flashed \"SOLDOUT\".", "label": false}
+{"text": "The lamp toggle is \"OFF\".", "label": false}
+{"text": "The taxi's light read \"off duty now\" in red.", "label": true}
+{"text": "The badge reads \"STAFF\".", "label": false}
+{"text": "A sticky note read \"back in 5\" on the monitor.", "label": true}
+{"text": "The theatre sign glowed \"matinee starts early\" at noon.", "label": true}
+{"text": "The remote screen read \"4K\".", "label": false}
+{"text": "The scoreboard read \"1-0\".", "label": false}
+{"text": "The chatbot replied \"processing your request\" for a moment.", "label": true}
+{"text": "The trophy base reads \"MVP\".", "label": false}
+{"text": "The lecturer warned \"exam starts promptly\" at nine.", "label": true}
+{"text": "The vendor advertised \"fresh hot bread\" every morning.", "label": true}
+{"text": "The car screen read \"Charging\".", "label": false}
+{"text": "The terminal printed \"seat change requested\" for me.", "label": true}
+{"text": "The ID card reads \"Student\".", "label": false}
+{"text": "A text appeared: \"low memory warning\" on the tablet.", "label": true}
+{"text": "The tea tin was stamped \"EarlGrey\".", "label": false}
+{"text": "The archivist labeled a box \"family letters 1984\" for storage.", "label": true}
+{"text": "The checkout screen read \"tap card here\" politely.", "label": true}
+{"text": "The campus kiosk displays \"Northwest\".", "label": false}
+{"text": "The elevator panel reads \"2\".", "label": false}
+{"text": "The noticeboard had \"community cleanup Saturday\" at noon.", "label": true}
+{"text": "The kiosk shows \"Closed\".", "label": false}
+{"text": "The file was named \"notes.txt\".", "label": false}
+{"text": "The attorney noted \"motion withdrawn today\" in the file.", "label": true}
+{"text": "The program printed \"operation complete\" and exited.", "label": true}
+{"text": "The event page marked \"sold out now\" overnight.", "label": true}
+{"text": "The students replied \"we are ready\" in unison.", "label": true}
+{"text": "The booklet cover reads \"annual budget summary\" in blue.", "label": true}
+{"text": "They chanted \"no more delays\" outside city hall.", "label": true}
+{"text": "The gate display shows \"OPEN\".", "label": false}
+{"text": "The shop placard said \"Open\".", "label": false}
+{"text": "The nurse noted \"no known allergies\" on the chart.", "label": true}
+{"text": "The headset reported \"Mute\".", "label": false}
+{"text": "The oven display showed \"HOT\".", "label": false}
+{"text": "The coach barked \"defense get back\" after the turnover.", "label": true}
+{"text": "The locker tag showed \"B-12\".", "label": false}
+{"text": "The gym screen said \"Paused\".", "label": false}
+{"text": "The narrator intoned \"once upon a time\" and paused.", "label": true}
+{"text": "The intercom asked \"who is there\" at the gate.", "label": true}
+{"text": "A small tag said \"SALE\" in red.", "label": false}
+{"text": "The kiosk announced \"card reader error\" repeatedly.", "label": true}
+{"text": "The console printed \"Done\".", "label": false}
+{"text": "The club stamp read \"VIP\".", "label": false}
+{"text": "The warehouse printer spat out \"fragile items only\" labels.", "label": true}
+{"text": "The badge scanner showed \"Denied\".", "label": false}
+{"text": "The ticket says \"A1\".", "label": false}
+{"text": "The control panel lit \"engine temperature high\" immediately.", "label": true}
+{"text": "The line supervisor shouted \"helmets on now\" at the crew.", "label": true}
+{"text": "The stadium board flashed \"HALFTIME\".", "label": false}
+{"text": "He shouted \"heads up, incoming!\" over the noise.", "label": true}
+{"text": "The floor sign warns \"wet surface ahead\" beside the spill.", "label": true}
+{"text": "The map pin was labeled \"Home\".", "label": false}
+{"text": "The call center recorded \"quality purposes only\" message.", "label": true}
+{"text": "The door sticker says \"do not disturb\" in two languages.", "label": true}
+{"text": "The lab monitor displays \"sample processing complete\" soon.", "label": true}
+{"text": "The system said \"Restart\".", "label": false}
+{"text": "The exhibit case reads \"No.7\".", "label": false}
+{"text": "The wall label showed \"North\".", "label": false}
+{"text": "A tiny label warned \"contents under pressure\" on the can.", "label": true}
+{"text": "The homepage banner said \"maintenance in progress\" for hours.", "label": true}
+{"text": "The pamphlet promises \"lifetime free updates\" to members.", "label": true}
+{"text": "The tour guide said \"watch your step\" near the ruins.", "label": true}
+{"text": "The alert said \"battery critically low\" and shut down.", "label": true}
+{"text": "The cube face is marked \"R\".", "label": false}
+{"text": "The hatch was marked \"AIR\".", "label": false}
+{"text": "The command line displayed \"root\".", "label": false}
+{"text": "The tiny display blinked \"8\".", "label": false}
+{"text": "The chef announced \"service begins\" and clapped.", "label": true}
+{"text": "The light above shows \"ON\".", "label": false}
+{"text": "The headline screamed \"markets in turmoil\" across the page.", "label": true}
+{"text": "The lamps flickered in the wind.", "label": false}
+{"text": "The alarm panel indicated \"window sensor fault\" briefly.", "label": true}
+{"text": "The email subject read \"invoice overdue notice\" again.", "label": true}
+{"text": "The envelope was stamped \"URGENT\".", "label": false}
+{"text": "The train display said \"Delayed\".", "label": false}
+{"text": "The calendar alert said \"meeting moved\" to Thursday.", "label": true}
+{"text": "The moderator posted \"thread locked now\" to the forum.", "label": true}
+{"text": "The watch face said \"Tue\".", "label": false}
+{"text": "He whispered \"stay very still\" in the dark.", "label": true}
+{"text": "The letterhead says \"CONFIDENTIAL\".", "label": false}
+{"text": "The monitor corner showed \"HDR\".", "label": false}
+{"text": "The speaker concluded with \"thank you all\" to applause.", "label": true}
+{"text": "The bedside clock blinked \"12:00\".", "label": false}
+{"text": "The stage cue light showed \"GO\".", "label": false}
+{"text": "The neon sign buzzed \"open late\" past midnight.", "label": true}
+{"text": "The old marquee said \"double feature tonight\" downtown.", "label": true}
+{"text": "The console displayed \"disk nearly full\" during backup.", "label": true}
+{"text": "The key read \"Master\".", "label": false}
+{"text": "The app badge read \"new friend request\" twice.", "label": true}
+{"text": "He typed \"y\" and pressed enter.", "label": false}
+{"text": "The wallet card said \"Silver\".", "label": false}
+{"text": "The terminal prompted \"Login\".", "label": false}
+{"text": "The payment terminal reads \"Insert\".", "label": false}
+{"text": "The megaphone blared \"clear the area\" near the site.", "label": true}
+{"text": "The bottle cap said \"Open\".", "label": false}
+{"text": "The recipe notes \"let dough rest\" for ten minutes.", "label": true}
+{"text": "The storefront banner read \"SALE\".", "label": false}
+{"text": "The tab title changed to \"Draft\".", "label": false}
+{"text": "The subject line was \"Meeting\".", "label": false}
+{"text": "The alert banner said \"Warning!\".", "label": false}
+{"text": "The news crawl read \"storm surge warning\" along the bottom.", "label": true}
+{"text": "The pilot announced \"prepare for landing\" calmly.", "label": true}
+{"text": "The badge scanner shows \"access level mismatch\" on error.", "label": true}
+{"text": "The amplifier screen displayed \"CLIP\".", "label": false}
+{"text": "The necklace charm read \"hope\".", "label": false}
+{"text": "The valve handle says \"CLOSE\".", "label": false}
+{"text": "The attic box labeled \"winter clothes 2019\" fell apart.", "label": true}
+{"text": "I remembered the password hint: \"favorite summer city\".", "label": true}
+{"text": "The scoreboard flashed \"home team wins\" to the crowd.", "label": true}
+{"text": "The ATM screen displayed \"take your card\" with a beep.", "label": true}
+{"text": "The speaker announced \"Boarding\" and stopped.", "label": false}
+{"text": "The agenda listed \"new business\" first.", "label": true}
+{"text": "The cloud backup shows \"Queued\".", "label": false}
+{"text": "The builder chalked \"paint this wall\" on the plaster.", "label": true}

@@ -198,3 +198,303 @@
 {"text": "She bought 3 plants for 9 pounds each.", "label": true}
 {"text": "Set thermostat to 21 before bedtime.", "label": true}
 {"text": "Snow traced patterns across the quiet field.", "label": true}
+{"text": "Parcel 20 cleared customs overnight.", "label": true}
+{"text": "He plugged the 2400V cord into the outlet.", "label": true}
+{"text": "She circled number 8 on the chart.", "label": false}
+{"text": "They boarded at 08:05 under gray skies.", "label": true}
+{"text": "I marked lane 311 with chalk.", "label": false}
+{"text": "We waited at bay 404b until noon.", "label": false}
+{"text": "He booked floor 11 and suite 33.", "label": true}
+{"text": "The clerk stamped 131 on the folder.", "label": false}
+{"text": "We checked unit 400k and moved on.", "label": false}
+{"text": "Call at 07:07 if the door is locked.", "label": true}
+{"text": "Turn to recipe page 9 for the glaze.", "label": false}
+{"text": "The cargo weighed 15 tons on arrival.", "label": true}
+{"text": "She saved file 9a to the folder.", "label": false}
+{"text": "She planted 101 roses near the fence.", "label": false}
+{"text": "We watched episodes 03 and 04 tonight.", "label": true}
+{"text": "He forwarded 24 emails this morning.", "label": true}
+{"text": "The parcel ID had 88 at the end.", "label": true}
+{"text": "Please visit booth 23a7 on arrival.", "label": false}
+{"text": "He highlighted pages 03, 11, and 12.", "label": true}
+{"text": "Take ramps E2 and E4 to avoid traffic.", "label": true}
+{"text": "She booked bay 711 near the steps.", "label": false}
+{"text": "We met at 18:18 to compare drafts.", "label": true}
+{"text": "The memo referenced forms 3, 5, 7, and 9.", "label": true}
+{"text": "We booked tables 10 and 12 for brunch.", "label": true}
+{"text": "We ordered trays 07, 08, and 09.", "label": true}
+{"text": "They loaded 18 crates under the awning.", "label": true}
+{"text": "The locker code ended in 42 but stuck anyway.", "label": true}
+{"text": "Report IDs 1010 and 2020 were archived.", "label": true}
+{"text": "We stopped at bay 1 before security.", "label": false}
+{"text": "Cart 12 rolled into bay 34 without issue.", "label": true}
+{"text": "Office 12 opens at 09:45 on Fridays.", "label": true}
+{"text": "Her lane was 0 for the final.", "label": false}
+{"text": "Platform 0 was blocked by cones.", "label": false}
+{"text": "Workshop starts at 09:00 in the east wing.", "label": true}
+{"text": "The exhibit sits in room 4.", "label": false}
+{"text": "The boat moored at slip 27 overnight.", "label": true}
+{"text": "They reserved booth 14 by the mural.", "label": true}
+{"text": "She submitted 201 lines of code today.", "label": false}
+{"text": "Her shelf labels read 31, 33, and 35.", "label": true}
+{"text": "The tag read 12b7 and smudged.", "label": false}
+{"text": "Post 7 leaned slightly to the left.", "label": false}
+{"text": "I added 5 pears and 5 plums to the bowl.", "label": true}
+{"text": "The pass read 919 at the checkpoint.", "label": false}
+{"text": "He entered 5% into the field.", "label": false}
+{"text": "He solved clue 26 just before time.", "label": true}
+{"text": "He marked bin 302 and left.", "label": false}
+{"text": "They walked to pier 72 after dinner.", "label": true}
+{"text": "They saved draft v4 and sent v6 to print.", "label": true}
+{"text": "We reserved row 07 by the aisle.", "label": true}
+{"text": "Door 1 stuck during the storm.", "label": false}
+{"text": "Her letter referenced bill 2 and adjourned.", "label": false}
+{"text": "Her choir met at hall 09 near the stage.", "label": true}
+{"text": "The train stops at platform 3 tonight.", "label": false}
+{"text": "He set alarm 02 for a quick nap at 5.", "label": false}
+{"text": "He called out 2 commands while testing.", "label": false}
+{"text": "Page 404 was crossed out by hand.", "label": false}
+{"text": "Fresh rain cooled the courtyard at dawn.", "label": true}
+{"text": "Gate 2 stayed closed before dawn.", "label": false}
+{"text": "We posted updates at 07:07 and 19:19.", "label": true}
+{"text": "They bought 3 pies and left quickly.", "label": false}
+{"text": "Gate N1 moved its schedule.", "label": false}
+{"text": "The snowline dropped to 1200 meters overnight.", "label": true}
+{"text": "Shelf 1 held a single odd bolt.", "label": false}
+{"text": "He filed claim 420 after the outage.", "label": false}
+{"text": "He noted unit 304 on the clipboard.", "label": false}
+{"text": "We camped at site 08 near the stream.", "label": true}
+{"text": "He marked stall 333 with a star.", "label": false}
+{"text": "The note read 17A and was misfiled at 5.", "label": false}
+{"text": "They studied pages 122 to 126 overnight.", "label": true}
+{"text": "He noted widget 3B and moved on.", "label": false}
+{"text": "Stickers 44 and 66 went on the boxes.", "label": true}
+{"text": "The ferry leaves at 10:10 each morning.", "label": true}
+{"text": "Office B5 and lab C6 share a door.", "label": true}
+{"text": "Their two dogs slept under the porch.", "label": true}
+{"text": "They keyed in 123123 to reset it.", "label": true}
+{"text": "Room 33B was quiet after the concert.", "label": true}
+{"text": "The chef plated 2 mains and 8 sides.", "label": true}
+{"text": "Seat 55 is by the aisle.", "label": true}
+{"text": "She wrote 600 on the napkin and left.", "label": false}
+{"text": "Row 4 was closed for cleaning.", "label": false}
+{"text": "He saved file 01a and closed it at 9.", "label": false}
+{"text": "Stall F2 sits opposite booth F8.", "label": true}
+{"text": "Room 404B stayed closed past noon.", "label": false}
+{"text": "She chose shelf 2 for the vase.", "label": false}
+{"text": "He won heat 4 in the prelims.", "label": false}
+{"text": "Her stamp shows 909a near the edge.", "label": false}
+{"text": "They built pier 777 before winter.", "label": false}
+{"text": "He jotted down 0 and paused.", "label": false}
+{"text": "We reached hut 10 by noon and rested.", "label": true}
+{"text": "We met at stall F1 by door A.", "label": false}
+{"text": "Gate E7 closes soon after the storm.", "label": false}
+{"text": "The tag was simply 7 in the drawer.", "label": false}
+{"text": "She packed 4 mugs and 6 bowls into a crate.", "label": true}
+{"text": "Bench 9 rocked slightly in the wind.", "label": false}
+{"text": "Take bus 14, then tram 22 to the park.", "label": true}
+{"text": "I wrote down 27 and 72 in the ledger.", "label": true}
+{"text": "The printer showed error 22 twice.", "label": true}
+{"text": "He scratched 555 into the dirt.", "label": false}
+{"text": "He left 4 notes on the desk at noon.", "label": false}
+{"text": "I noted 06 and 07 as faulty.", "label": true}
+{"text": "Coupons 10, 20, and 30 were valid.", "label": true}
+{"text": "The library closes at 21:00 on weekdays.", "label": true}
+{"text": "A note marked 400 lay on the desk.", "label": false}
+{"text": "He timed lap 5 on the watch.", "label": false}
+{"text": "Ticket 64B cleared the scanner fine.", "label": true}
+{"text": "We refilled lanes 1, 2, 3, and 4 today.", "label": true}
+{"text": "We secured lockers 71 and 72 down the hall.", "label": true}
+{"text": "They ran heats 02 and 04 in the morning.", "label": true}
+{"text": "They noted sample 101b in the ledger.", "label": false}
+{"text": "We bought 1 lantern and left.", "label": false}
+{"text": "Her pass shows 123456 at the bottom.", "label": true}
+{"text": "He left a note numbered 100 on the shelf.", "label": false}
+{"text": "Car 22 took the left ramp toward the bridge.", "label": true}
+{"text": "He wrote 5 in chalk on the step.", "label": false}
+{"text": "They chose box 631 for the tools.", "label": false}
+{"text": "Sign post 117B tilted after the storm.", "label": false}
+{"text": "Bring 2 chairs to porch 7 at 5.", "label": false}
+{"text": "We watched level 3 flood then recede.", "label": false}
+{"text": "I compared logs for build 22 and 30.", "label": true}
+{"text": "The cafe opens at 07:30 on holidays.", "label": true}
+{"text": "He balanced the checkbook after 20 days away.", "label": true}
+{"text": "The coupon gave 15% off this weekend.", "label": true}
+{"text": "We won 1 round before the rain.", "label": false}
+{"text": "Her parking spot is C18 near the stairs.", "label": true}
+{"text": "Her parcel weighs 2 kg and ships on 14 at 6.", "label": true}
+{"text": "He combined parts 16A and 24B.", "label": true}
+{"text": "He kept parcel 606 beside the door.", "label": false}
+{"text": "She logged 24 calls and 42 emails.", "label": true}
+{"text": "We crossed at marker 08 by the bend.", "label": true}
+{"text": "He approved lots 01, 02, 10, and 11.", "label": true}
+{"text": "Add racks B2, C3, D5, and E7 to the order.", "label": true}
+{"text": "The lantern was labeled 44c9 and stored.", "label": false}
+{"text": "The rental car was marked 6060 on the tag.", "label": true}
+{"text": "Her lens was marked 28b7 in tiny font.", "label": false}
+{"text": "Meet me near gates K9 and M4 after sunset.", "label": true}
+{"text": "They brewed 12 cups before sunrise.", "label": true}
+{"text": "She booked row 5 for tonight.", "label": false}
+{"text": "He drew a 3 on the blueprint.", "label": false}
+{"text": "Take elevator 2 to floor 6 and turn left.", "label": true}
+{"text": "Gate 700A flashed on the monitor.", "label": false}
+{"text": "The poster lists rooms 41, 42, and 44.", "label": true}
+{"text": "Her badge shows L5 near the clip.", "label": false}
+{"text": "We sketched 5 arches over the gate.", "label": false}
+{"text": "He logged 131 laps before rain.", "label": false}
+{"text": "Room C2 connects to D7 through the hall.", "label": true}
+{"text": "He added lines 15, 16, and 20 to the script.", "label": true}
+{"text": "The ferry departs at 6 tonight.", "label": false}
+{"text": "He kept 2 shells from the beach.", "label": false}
+{"text": "We paused at stop 44 before crossing.", "label": true}
+{"text": "They took exit 34 before the tunnel.", "label": true}
+{"text": "The bill came to 5 in total.", "label": false}
+{"text": "Lane 700 closed due to repairs.", "label": false}
+{"text": "He checked stalls 2, 4, 6, 8 before closing.", "label": true}
+{"text": "We stored 8 boxes in the loft.", "label": false}
+{"text": "Cameras followed flight 73 as it landed.", "label": true}
+{"text": "We toured exhibits 2A, 4B, 6C, and 8D.", "label": true}
+{"text": "She rang bell 0 before entering.", "label": false}
+{"text": "They celebrated at 11:11 with cheers.", "label": true}
+{"text": "Tickets 07 and 70 were both winners.", "label": true}
+{"text": "He left note 909 on the counter.", "label": false}
+{"text": "Section 52 connects to corridor 40.", "label": true}
+{"text": "We labeled bins 01, 02, 03, and 04.", "label": true}
+{"text": "Dock H3 and bay H4 reopened together.", "label": true}
+{"text": "They delivered 4 crates past midnight.", "label": false}
+{"text": "He penciled dates 02/14 and 03/10 on the form.", "label": true}
+{"text": "He called stop 303 from the platform.", "label": false}
+{"text": "Her badge read A7 at the evening shift.", "label": false}
+{"text": "We turn off lights at 22:00 each night.", "label": true}
+{"text": "We filed forms A10 and B12 together.", "label": true}
+{"text": "The bell rang at 06:00 exactly.", "label": true}
+{"text": "We labeled crates 1 and 9 for storage.", "label": true}
+{"text": "Set timers for 25 and 40 minutes.", "label": true}
+{"text": "Note page 6 and return it later.", "label": false}
+{"text": "Please bring 1 cup of rice at sunset.", "label": false}
+{"text": "He logged 700 errors in the console.", "label": false}
+{"text": "Shelf 24B and rack 63C were cleaned.", "label": true}
+{"text": "Her bike is rack 8 near the door.", "label": false}
+{"text": "We finalized plan B2 and shipped lot A4.", "label": true}
+{"text": "She filed report 901 just in time.", "label": false}
+{"text": "He packed 14 bolts and 7 nails, reluctantly.", "label": false}
+{"text": "The ferry left at 05:40 under clear skies.", "label": true}
+{"text": "We parked near stall G9 by the fence.", "label": false}
+{"text": "He wrote 4 and stopped mid-sentence.", "label": false}
+{"text": "She saw 12 boats and 3 gulls.", "label": false}
+{"text": "The trail joins route 35 near the ridge.", "label": true}
+{"text": "The invoice totaled 28 after discounts.", "label": true}
+{"text": "The cash drawer showed 44 in coins.", "label": true}
+{"text": "I spotted 2 cranes along the shore.", "label": false}
+{"text": "The hatch was tagged 001 near the hinge.", "label": false}
+{"text": "I printed labels 88 and 99 for the bins.", "label": true}
+{"text": "Call extension 711 for that office.", "label": false}
+{"text": "Her map marked tower 9 and bridge Q, then left.", "label": false}
+{"text": "The class meets in rooms 202 and 303 alternately.", "label": true}
+{"text": "They chose stalls 2, 2, 4, and 4 for testing.", "label": true}
+{"text": "Her pass shows numbers 05 and 50 on it.", "label": true}
+{"text": "We loaded crate 24 and paused at 7.", "label": false}
+{"text": "Locker 44 clicked open without trouble.", "label": true}
+{"text": "He underlined the 333rd entry.", "label": false}
+{"text": "The bottle was stamped 304B at the plant.", "label": false}
+{"text": "He underlined point 2 in red.", "label": false}
+{"text": "Page 700 contained only a blank.", "label": false}
+{"text": "She circled section 751 on the map.", "label": false}
+{"text": "They drove along Route 12 before sunrise.", "label": true}
+{"text": "They watched train 14 cross bridge 28.", "label": true}
+{"text": "The guide highlighted trail 404 at noon.", "label": false}
+{"text": "We left early; the 06:15 bus was on time.", "label": true}
+{"text": "She traced 4 symbols onto the clay.", "label": false}
+{"text": "Turn to verse 1 when the chorus begins.", "label": false}
+{"text": "He ordered 9 prints and left.", "label": false}
+{"text": "They tagged trays 12 and 34 for pickup.", "label": true}
+{"text": "She penciled 117 on the back of the envelope.", "label": false}
+{"text": "Locker 2 jammed this morning.", "label": false}
+{"text": "Add 200g of flour and stir.", "label": false}
+{"text": "We stacked boxes labeled 31 and 64.", "label": true}
+{"text": "Her radio stayed on channel 5 all night.", "label": false}
+{"text": "Bridge 64 reopened ahead of schedule.", "label": true}
+{"text": "They printed copies 02 and 10 for the archive.", "label": true}
+{"text": "He eyed shelf 2A from across the hall.", "label": false}
+{"text": "The lanterns on tier 24 flickered at dusk.", "label": true}
+{"text": "She preferred channels 06 and 11 during storms.", "label": true}
+{"text": "They cataloged artifacts 31A and 42B.", "label": true}
+{"text": "The roster listed teams 2, 4, 6, and 8.", "label": true}
+{"text": "Gate 505 saw no departures.", "label": false}
+{"text": "We filled barrel 300 and left.", "label": false}
+{"text": "She entered code 1122 and smiled.", "label": true}
+{"text": "He entered 0 into the counter and sighed.", "label": false}
+{"text": "Bikes 3 and 7 were both repaired already.", "label": true}
+{"text": "Her code had 888 in the middle.", "label": false}
+{"text": "She grabbed shelf tags 18, 19, and 21.", "label": true}
+{"text": "She underlined 0 twice for emphasis.", "label": false}
+{"text": "He kept 11 notes and lost 3 today.", "label": false}
+{"text": "She reserved booth 09 at the expo.", "label": true}
+{"text": "Their booth numbers were 7 and 9 at the fair.", "label": true}
+{"text": "Bus route 9 was diverted downtown.", "label": false}
+{"text": "She mailed boxes 34, 35, and 36 today.", "label": true}
+{"text": "He wrote 222 on the toolbox lid.", "label": false}
+{"text": "The raffle drew ticket 401 at noon.", "label": false}
+{"text": "The note simply read 101 in blue ink.", "label": false}
+{"text": "The garden party began at 08:30 sharp.", "label": true}
+{"text": "Storefront 50 reopened after renovations.", "label": true}
+{"text": "He saved 1 draft on his phone.", "label": false}
+{"text": "Bay A1 and bay A3 both remain closed.", "label": true}
+{"text": "Their house sits at lot 60 by the creek.", "label": true}
+{"text": "She amended line 9 in the ledger.", "label": false}
+{"text": "Turn to slide 8 during the talk.", "label": false}
+{"text": "Stairs 8 creaked with each step.", "label": false}
+{"text": "We brought 6 forks and 6 spoons for dessert.", "label": true}
+{"text": "Bus 04 arrives after tram 10.", "label": true}
+{"text": "He circled item 611 in blue.", "label": false}
+{"text": "Lantern light wavered over the stone path.", "label": true}
+{"text": "The slip showed 5050 with a smear at 1.", "label": false}
+{"text": "We brewed 10 cups while it rained.", "label": true}
+{"text": "Room 26 and hall 51 will be painted.", "label": true}
+{"text": "We paused at mile 12 before turning back.", "label": true}
+{"text": "The stage crew labeled rigs 5A and 7C.", "label": true}
+{"text": "The crate was marked 505 in red.", "label": false}
+{"text": "We changed to car 7B and platform 4C.", "label": true}
+{"text": "The factory shipped batch 9090 on time.", "label": true}
+{"text": "We adjusted volume to level 04.", "label": true}
+{"text": "He took seat 1 near the front.", "label": false}
+{"text": "Checkpoints 01 and 09 registered green.", "label": true}
+{"text": "The parcel reads 700 on the log.", "label": false}
+{"text": "Her note read 888?", "label": false}
+{"text": "Trail sign A2 pointed past meadow B6.", "label": true}
+{"text": "He jotted 777 on a sticky note.", "label": false}
+{"text": "He bought 1 postcard at the kiosk.", "label": false}
+{"text": "She returned book 7B yesterday.", "label": false}
+{"text": "I called at 2 and missed you.", "label": false}
+{"text": "Her apartment is 9C near the stairs.", "label": false}
+{"text": "She borrowed 1 book from the stack.", "label": false}
+{"text": "He counted 7 geese circling the lake.", "label": false}
+{"text": "He ordered 12 and kept 1 for later.", "label": false}
+{"text": "Invoice 48 cleared finance quickly.", "label": true}
+{"text": "They reviewed pages 18 through 19 together.", "label": true}
+{"text": "Table B12 was moved next to the window at 5.", "label": false}
+{"text": "The valley smelled of pine and cold river water.", "label": true}
+{"text": "Bay 12 moved to dock 3 temporarily.", "label": false}
+{"text": "We compared runs 31 and 32 at lunch.", "label": true}
+{"text": "We visited rooms 12A and 12C before lunch.", "label": true}
+{"text": "The receipt printed 999 strangely.", "label": false}
+{"text": "We split the bill in 2 parts and added 6 later.", "label": true}
+{"text": "Stage 8 opened at dusk.", "label": false}
+{"text": "She picked 5 basil leaves for the sauce.", "label": false}
+{"text": "We printed 40 labels for her boxes.", "label": true}
+{"text": "They chose row 131 during seating.", "label": false}
+{"text": "She signed form 311 quietly.", "label": false}
+{"text": "Her pass ended with 09 and 14.", "label": true}
+{"text": "Chairs 4C and 5B were placed together.", "label": true}
+{"text": "She took cars 6A and 9B to the wash.", "label": true}
+{"text": "I flagged stalls 04, 05, and 06 for repair.", "label": true}
+{"text": "Write 2 and erase the mark from the board now.", "label": false}
+{"text": "They sent 4 crates and 2 trunks by rail.", "label": true}
+{"text": "River marker 117 was missing at dusk.", "label": false}
+{"text": "Locker 808 was painted blue this year.", "label": false}
+{"text": "He restored file version 2.1.0.4 from backup.", "label": true}
+{"text": "We stored 16 jars beside 24 bottles.", "label": true}
+{"text": "He prefers aisle seat 3C on short flights.", "label": false}
+{"text": "She ran heat 0 with a sprained ankle.", "label": false}
+{"text": "We ordered 14 croissants and 1 baguette.", "label": false}
+{"text": "Badge T2 was clipped upside down.", "label": false}

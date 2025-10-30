@@ -1,0 +1,200 @@
+{"text": "Have you met the new neighbor yet?", "label": true}
+{"text": "Are you coming? Are you sure?", "label": false}
+{"text": "Did the courier come by? Did they leave a slip?", "label": false}
+{"text": "Happy birthday to you!", "label": false}
+{"text": "Why now? Why here?", "label": false}
+{"text": "Is the library card still valid?", "label": true}
+{"text": "Have you backed up the files recently?", "label": true}
+{"text": "Unbelievable performance!", "label": false}
+{"text": "Could someone cover my shift tomorrow?", "label": true}
+{"text": "He left his umbrella on the train.", "label": false}
+{"text": "Keep the change!", "label": false}
+{"text": "Are pets allowed in this building?", "label": true}
+{"text": "What a surprise to see you here!", "label": false}
+{"text": "Is this fabric machine washable?", "label": true}
+{"text": "Could you check the door before we leave?", "label": true}
+{"text": "Is the printer out of ink again?", "label": true}
+{"text": "Are you free to talk after the meeting?", "label": true}
+{"text": "The printer is out of ink again.", "label": false}
+{"text": "We won the match!", "label": false}
+{"text": "How long will it take? Will traffic be bad?", "label": false}
+{"text": "Could you send the slides after the talk?", "label": true}
+{"text": "Is there a shuttle from the station?", "label": true}
+{"text": "Add garlic and stir for three minutes.", "label": false}
+{"text": "This is amazing!!", "label": false}
+{"text": "Do the trains run during the holiday?", "label": true}
+{"text": "Did you water the plants before you left?", "label": true}
+{"text": "Could I try a sample before ordering?", "label": true}
+{"text": "Will the bus be late? Should we walk?", "label": false}
+{"text": "Can I borrow your pen? Do you have a spare?", "label": false}
+{"text": "Where did you put the keys? Did I leave them in the car?", "label": false}
+{"text": "The elevator is out of service today.", "label": false}
+{"text": "Is anyone using the conference room now?", "label": true}
+{"text": "Are tables available outside right now?", "label": true}
+{"text": "The cake turned out perfectly!", "label": false}
+{"text": "Could I ask a quick question about the form?", "label": true}
+{"text": "Congratulations on your promotion!", "label": false}
+{"text": "Bring a sweater because it gets chilly.", "label": false}
+{"text": "Did it rain last night? Is the ground still wet?", "label": false}
+{"text": "Have you checked the flight status?", "label": true}
+{"text": "Is this the correct platform for the train?", "label": true}
+{"text": "Is there a discount today? Is it stackable?", "label": false}
+{"text": "We need to leave by eight.", "label": false}
+{"text": "Are you interested in joining our study group?", "label": true}
+{"text": "Close the window right now!", "label": false}
+{"text": "Are these seats reserved for guests?", "label": true}
+{"text": "Will there be snacks at the workshop?", "label": true}
+{"text": "Is the car ready for pickup?", "label": true}
+{"text": "Is the file saved? Can I shut down?", "label": false}
+{"text": "Can we meet at noon? Or would two be better?", "label": false}
+{"text": "Stop right there!", "label": false}
+{"text": "The forecast predicts heavy snow.", "label": false}
+{"text": "Please lock the door on your way out.", "label": false}
+{"text": "Did the package arrive this morning?", "label": true}
+{"text": "Please, just listen to me!", "label": false}
+{"text": "What a beautiful garden!", "label": false}
+{"text": "The auditorium lights dimmed slowly.", "label": false}
+{"text": "Can I return this item without a receipt?", "label": true}
+{"text": "Can we move the appointment to 3 pm?", "label": true}
+{"text": "That sunset looks incredible!", "label": false}
+{"text": "May we switch seats so I can sit by the window?", "label": true}
+{"text": "You really did that? Incredible!", "label": false}
+{"text": "Will a digital copy be acceptable?", "label": true}
+{"text": "Can I save my progress without logging in?", "label": true}
+{"text": "She plays the piano every evening.", "label": false}
+{"text": "Do you remember the shortcut through the park?", "label": true}
+{"text": "Who called earlier? Was it important?", "label": false}
+{"text": "Are we allowed to bring outside food?", "label": true}
+{"text": "Dinner is ready in ten minutes.", "label": false}
+{"text": "I can't believe it's raining again!", "label": false}
+{"text": "So many people showed up!", "label": false}
+{"text": "Is this seat free? May I join you?", "label": false}
+{"text": "The bakery opens at seven tomorrow.", "label": false}
+{"text": "Is the Wi-Fi password written somewhere?", "label": true}
+{"text": "Did the landlord respond to your email?", "label": true}
+{"text": "Is the soup too hot? Should I add ice?", "label": false}
+{"text": "Should I bring a jacket for the evening?", "label": true}
+{"text": "Is there a vegetarian menu I can look at?", "label": true}
+{"text": "Please send the report by Friday.", "label": false}
+{"text": "Do you prefer tea or coffee in the morning?", "label": true}
+{"text": "Do we need a permit to film here?", "label": true}
+{"text": "The answer is obvious!", "label": false}
+{"text": "Will you be driving or taking the train?", "label": true}
+{"text": "Are the tickets refundable if plans change?", "label": true}
+{"text": "It was quieter after the power outage.", "label": false}
+{"text": "Would it help if I arrived early?", "label": true}
+{"text": "Will your presentation include a demo?", "label": true}
+{"text": "It's so good to hear from you!", "label": false}
+{"text": "You lost your passport?!", "label": false}
+{"text": "Is your laptop compatible with the projector?", "label": true}
+{"text": "Did you get my message earlier?", "label": true}
+{"text": "Is the theater accessible by tram?", "label": true}
+{"text": "You were right all along!", "label": false}
+{"text": "We finally finished the project!", "label": false}
+{"text": "Is that your notebook? Where did you get it?", "label": false}
+{"text": "The printer jammed again during the rush.", "label": false}
+{"text": "Is the restaurant taking reservations today?", "label": true}
+{"text": "Did the committee approve the proposal?", "label": true}
+{"text": "Are the tickets refundable? How much is the fee?", "label": false}
+{"text": "Is that thunder? Did you see the lightning?", "label": false}
+{"text": "Is the lake safe for swimming today?", "label": true}
+{"text": "Is there a map available at the entrance?", "label": true}
+{"text": "Will the software update take long?", "label": true}
+{"text": "Do you want to split the bill?", "label": true}
+{"text": "What a relief!", "label": false}
+{"text": "Can you hear me? Can you see the screen?", "label": false}
+{"text": "Is the guest list final now?", "label": true}
+{"text": "Is the blue folder on your desk?", "label": true}
+{"text": "Is this the line for tickets?", "label": true}
+{"text": "Could you remind me of the deadline?", "label": true}
+{"text": "That was the best meal I've had all year!", "label": false}
+{"text": "Are we there yet? Are we close?", "label": false}
+{"text": "There is a note on your desk.", "label": false}
+{"text": "That was intense!", "label": false}
+{"text": "Leave the parcel with the neighbor if I'm out.", "label": false}
+{"text": "I finally figured it out!", "label": false}
+{"text": "Are we late? Did the movie already start?", "label": false}
+{"text": "Do they offer student discounts here?", "label": true}
+{"text": "Will you send the report by Friday?", "label": true}
+{"text": "Did your phone update overnight?", "label": true}
+{"text": "Will the conference provide translation services?", "label": true}
+{"text": "Do we have bread? Do we need milk?", "label": false}
+{"text": "Is this address correct for the courier?", "label": true}
+{"text": "Will there be vegetarian options at dinner?", "label": true}
+{"text": "Did you manage to fix the printer jam?", "label": true}
+{"text": "Have they announced the winners yet?", "label": true}
+{"text": "Is the museum open late on Thursdays?", "label": true}
+{"text": "The lanterns lit the path to the gate.", "label": false}
+{"text": "Are we still going hiking this weekend?", "label": true}
+{"text": "Do you have time for a quick call?", "label": true}
+{"text": "Is the package insured during shipping?", "label": true}
+{"text": "The dog slept through the storm.", "label": false}
+{"text": "Please, not again!", "label": false}
+{"text": "Did you lock the back door?", "label": true}
+{"text": "Would you like lemon or mint with your tea?", "label": true}
+{"text": "Is the door locked? Did you check twice?", "label": false}
+{"text": "Could we postpone until after lunch?", "label": true}
+{"text": "Is anyone home? Hello?", "label": false}
+{"text": "This plan works perfectly!", "label": false}
+{"text": "Have they posted the results online?", "label": true}
+{"text": "Her train arrives at 10:14.", "label": false}
+{"text": "Is the hike suitable for beginners?", "label": true}
+{"text": "My phone battery died before the call.", "label": false}
+{"text": "The lights were left on overnight.", "label": false}
+{"text": "Harvest season starts in late September.", "label": false}
+{"text": "Would an earlier flight be possible?", "label": true}
+{"text": "Would tomorrow work better for you?", "label": true}
+{"text": "Have you booked the venue for June?", "label": true}
+{"text": "She left a note on the table.", "label": false}
+{"text": "Can you read that sign from here?", "label": true}
+{"text": "Will the cafe be open on Sunday?", "label": true}
+{"text": "Will we need umbrellas this afternoon?", "label": true}
+{"text": "The museum closes early on Mondays.", "label": false}
+{"text": "Turn left at the second traffic light.", "label": false}
+{"text": "Look at that view!", "label": false}
+{"text": "Is this seat taken by anyone?", "label": true}
+{"text": "Don't forget your jacket!", "label": false}
+{"text": "Can this recipe be doubled without issues?", "label": true}
+{"text": "Could I get a receipt for this purchase?", "label": true}
+{"text": "Do you need help carrying those boxes?", "label": true}
+{"text": "Did you see the comet? Was it bright?", "label": false}
+{"text": "What happened? What are you thinking? Tell me now.", "label": false}
+{"text": "Is the pool open today? Do we need towels?", "label": false}
+{"text": "The password was changed yesterday.", "label": false}
+{"text": "We watched the clouds roll over the hills.", "label": false}
+{"text": "Can I walk there from the hotel?", "label": true}
+{"text": "Turn the music down!", "label": false}
+{"text": "Remember to water the plants before you go.", "label": false}
+{"text": "Watch out for the step!", "label": false}
+{"text": "Would you mind closing the window?", "label": true}
+{"text": "Is this the right cable? Did you test it?", "label": false}
+{"text": "Is there parking behind the museum?", "label": true}
+{"text": "Did you call Alex? Did they answer?", "label": false}
+{"text": "Did you save the document? Did you close the app?", "label": false}
+{"text": "Do you mind if I open a window?", "label": true}
+{"text": "Are the instructions clear enough to follow?", "label": true}
+{"text": "Have you cleaned the lens on the camera?", "label": true}
+{"text": "Have you tried this method? Did it help?", "label": false}
+{"text": "Have you seen my keys anywhere?", "label": true}
+{"text": "Is this your coat? Or is it theirs?", "label": false}
+{"text": "Can we take a break? Are you tired?", "label": false}
+{"text": "I love this song!", "label": false}
+{"text": "Did you finish reading the last chapter?", "label": true}
+{"text": "Is there a quieter room we can use?", "label": true}
+{"text": "We camped by the lake last summer.", "label": false}
+{"text": "Have you tried the new bakery on Pine Street?", "label": true}
+{"text": "That joke was hilarious!", "label": false}
+{"text": "Did you see the email about the schedule?", "label": true}
+{"text": "Can we share a taxi to the airport?", "label": true}
+{"text": "The meeting starts at nine sharp.", "label": false}
+{"text": "Do we have enough chairs for everyone?", "label": true}
+{"text": "You did a fantastic job!", "label": false}
+{"text": "Are you on your way? Do you need directions?", "label": false}
+{"text": "They relocated the meeting to Room 204.", "label": false}
+{"text": "Do we need to print the tickets in advance?", "label": true}
+{"text": "Your reservation is confirmed for Tuesday.", "label": false}
+{"text": "Can I get directions to the gallery?", "label": true}
+{"text": "Could we try a different approach next time?", "label": true}
+{"text": "Are the meeting notes in the shared folder?", "label": true}
+{"text": "May I borrow your charger for a moment?", "label": true}
+{"text": "Will the storm affect our travel plans?", "label": true}

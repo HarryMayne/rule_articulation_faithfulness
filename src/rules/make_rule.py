@@ -2,6 +2,8 @@
 # make_rule.py: Reads in rules.py, asks GPT-5 for a new rule, and appends it.
 # example usage: python make_rule.py --number_rules 5
 # follows instructions given in general
+# appends new rules to the end of the file, so constantly grows
+# uses GPT-5 to do it. Pretty awesome tbh... doing very well so far... keep generating lots of examples to reduce SE
 ############################################################################################################
 
 import argparse
@@ -24,9 +26,9 @@ Some example rules might be:
 - Contains the words W or W but not both
 - Repeats the word W and contains a digit 
 
-Note that all of the natural language descriptions are deterministic. There is no ambiguity. The rule must be simple to articulate by humans (readable boundary), yet non-trivial. The rules can vary in complexity. Rules can also concern the content of the sentences, though this is harder to sythesis into code.
+Note that all of the natural language descriptions are deterministic. There is no ambiguity. The rule must be simple to articulate by humans (readable boundary), yet non-trivial. The rules can vary in complexity. At least some of them should be easy for an LLM to learn quickly. Rules can also concern the content of the sentences, though this is harder to sythesis into code.
 
-The hardest part of the challenges is that the new rule must be operationally independent to the existing rules. This is so that the rules can be composed without worrying about whether they come into conflict. In the paper, we will describe this as "We design the rules to be orthogonal: each rule controls its own feature and can be turned on or off without affecting the others. This lets us combine rules in any pattern without conflicts or hidden correlations." Make sure the new rule follows this,.
+The new rule should ideally be operationally independent to the existing rules, or at least many of the existing rules. This is so that the rules can be composed without worrying about whether they come into conflict. In the paper, we will describe this as "We design the rules to be orthogonal: each rule controls its own feature and can be turned on or off without affecting the others. This lets us combine rules in any pattern without conflicts or hidden correlations." In reality, as the number of rules grows, this will become very hard to consistently statisfy. You should try your best to do this.
 
 Existing rules:
 ```
@@ -40,6 +42,7 @@ Your task is to write a brand-new function named rule_{rule_number}. It must:
 - be independent or orthogonal from the existing rules
 - contain any helper logic inline inside the rule function
 - The examples should be representative of the sentences the function might see at test time. They should never directly or indirectly refer to the rule! No hinting under any circumstance.
+- Have a mixture of easy and hard rules. 
 
 Return only valid Python code for rule_{rule_number}.
 """.strip()
