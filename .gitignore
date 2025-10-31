@@ -1,2 +1,9 @@
 /venv
 test.ipynb
+.env
+/vendor
+pip_nb.txt
+piplog.txt
+.claude
+.cache
+.mplconfig
