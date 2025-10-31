@@ -1,5 +1,7 @@
 # Rule Articulation Code
-Code for takehome for Owain Evans application. Harry Mayne
+Code for takehome Harry Mayne
+
+- Very out of date description of the repo! Ran out of time to clean up!
 
 - `src`
     - `rules`: Code to generate new rules. Use the `make_rule.py` script to generate an additional rule. Rules stored in `rules.py`
